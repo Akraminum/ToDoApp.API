@@ -1,0 +1,4 @@
+﻿
+
+- Sheet from BickStores API Project
+	- filtering
