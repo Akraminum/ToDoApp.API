@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using ToDoAppAPI.Dtos;
-using ToDoAppAPI.Model;
+using ToDoAppAPI.Entities;
 
 namespace ToDoAppAPI.Mappers
 {
@@ -8,8 +8,8 @@ namespace ToDoAppAPI.Mappers
     {
         public ListProfile()
         {
-            CreateMap<ListModel, ListDto>();
-            CreateMap<ListModel, ListDetailsDto>();
+            CreateMap<ListEntity, ListDto>();
+            CreateMap<ListEntity, ListDetailsDto>();
         }
     }
 }

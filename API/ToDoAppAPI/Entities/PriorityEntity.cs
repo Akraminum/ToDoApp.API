@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ToDoAppAPI.Model
+namespace ToDoAppAPI.Entities
 {
-    public class PriorityModel : BaseModel
+    public class PriorityEntity : BaseEntity<int>
     {
-        public string Name { get; set; }
+        public string Name { get; set; } = null!;
         public int Order { get; set; }
         public string Color { get; set; } = "#ffffff";
 
-        // list of taskmodel
-        public IEnumerable<TaskModel>? Tasks { get; set; }
     }
 }

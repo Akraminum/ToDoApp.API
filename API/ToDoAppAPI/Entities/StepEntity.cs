@@ -6,16 +6,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ToDoAppAPI.Model
+namespace ToDoAppAPI.Entities
 {
-    public class StepModel : BaseModel
+    public class StepEntity : BaseEntity<int>
     {
         [StringLength(100)]
-        public string Name { get; set; }
+        public string Body { get; set; } = null!;
         public bool IsComplete { get; set; } = false;
-        
+
+
         public int TaskId { get; set; }
         [ForeignKey("TaskId")]
-        public TaskModel? Task { get; set; }
+        public TaskEntity? Task { get; set; }
+
+        public int UserCreatedId { get; set; }
+        [ForeignKey("UserCreatedId")]
+        public TaskEntity? UserCreated { get; set; }
     }
 }

@@ -6,6 +6,6 @@ namespace ToDoAppAPI.Dtos.Users
     {
         [Required]
         [MinLength(3)]
-        public string UserName { get; set; }
+        public string UserName { get; set; } = null!;
     }
 }

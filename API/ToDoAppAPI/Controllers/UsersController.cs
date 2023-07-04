@@ -2,20 +2,21 @@
 using Microsoft.AspNetCore.Mvc;
 using ToDoAppAPI.Dtos.Users;
 using ToDoAppAPI.Dtos.Users.Authenticate;
+using ToDoAppAPI.Entities;
 using ToDoAppAPI.Services;
 using ToDoAppAPI.Services.IServices;
 
 namespace ToDoAppAPI.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
+    [ApiController] 
     public class UsersController : ControllerBase
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<UserEntity> _userManager;
         private readonly ITokenCreationService _jwtService;
 
         public UsersController(
-            UserManager<IdentityUser> userManager,
+            UserManager<UserEntity> userManager,
             ITokenCreationService jwtService
             )
         {
@@ -31,7 +32,7 @@ namespace ToDoAppAPI.Controllers
             //    return BadRequest(ModelState);
 
             var result = await _userManager.CreateAsync(
-                new IdentityUser() { UserName = InputDto.UserName, Email = InputDto.Email },
+                new UserEntity() { UserName = InputDto.UserName, Email = InputDto.Email },
                 InputDto.Password
             );
 
@@ -66,7 +67,7 @@ namespace ToDoAppAPI.Controllers
             if (!ModelState.IsValid)
             {
                 return BadRequest("Bad credentials");
-            }
+            } 
 
             var user = await _userManager.FindByNameAsync(request.UserName);
             if (user == null)
@@ -78,7 +79,7 @@ namespace ToDoAppAPI.Controllers
                 return BadRequest("Bad credentials");
 
 
-            var token = _jwtService.CreateToken(user);
+            var token = await _jwtService.CreateToken(user);
 
             return Ok(token);
         }

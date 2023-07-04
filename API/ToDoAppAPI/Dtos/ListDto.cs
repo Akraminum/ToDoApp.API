@@ -1,5 +1,4 @@
-﻿using ToDoAppAPI.Model;
-using ToDoAppAPI.Models;
+﻿using ToDoAppAPI.Entities;
 
 namespace ToDoAppAPI.Dtos
 {

@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace ToDoAppAPI.database.migrations
+namespace ToDoAppAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class AddIdentityTables : Migration
+    public partial class Identity : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -30,6 +30,8 @@ namespace ToDoAppAPI.database.migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
@@ -156,34 +158,6 @@ namespace ToDoAppAPI.database.migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.UpdateData(
-                table: "Tasks",
-                keyColumn: "Id",
-                keyValue: 1,
-                column: "CreatedDate",
-                value: new DateTime(2023, 6, 29, 15, 46, 41, 157, DateTimeKind.Local).AddTicks(9777));
-
-            migrationBuilder.UpdateData(
-                table: "Tasks",
-                keyColumn: "Id",
-                keyValue: 2,
-                column: "CreatedDate",
-                value: new DateTime(2023, 6, 29, 15, 46, 41, 157, DateTimeKind.Local).AddTicks(9828));
-
-            migrationBuilder.UpdateData(
-                table: "Tasks",
-                keyColumn: "Id",
-                keyValue: 3,
-                column: "CreatedDate",
-                value: new DateTime(2023, 6, 29, 15, 46, 41, 157, DateTimeKind.Local).AddTicks(9836));
-
-            migrationBuilder.UpdateData(
-                table: "Tasks",
-                keyColumn: "Id",
-                keyValue: 4,
-                column: "CreatedDate",
-                value: new DateTime(2023, 6, 29, 15, 46, 41, 157, DateTimeKind.Local).AddTicks(9841));
-
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
                 table: "AspNetRoleClaims",
@@ -247,34 +221,6 @@ namespace ToDoAppAPI.database.migrations
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
-
-            migrationBuilder.UpdateData(
-                table: "Tasks",
-                keyColumn: "Id",
-                keyValue: 1,
-                column: "CreatedDate",
-                value: new DateTime(2023, 3, 4, 16, 58, 42, 4, DateTimeKind.Local).AddTicks(6561));
-
-            migrationBuilder.UpdateData(
-                table: "Tasks",
-                keyColumn: "Id",
-                keyValue: 2,
-                column: "CreatedDate",
-                value: new DateTime(2023, 3, 4, 16, 58, 42, 4, DateTimeKind.Local).AddTicks(6572));
-
-            migrationBuilder.UpdateData(
-                table: "Tasks",
-                keyColumn: "Id",
-                keyValue: 3,
-                column: "CreatedDate",
-                value: new DateTime(2023, 3, 4, 16, 58, 42, 4, DateTimeKind.Local).AddTicks(6575));
-
-            migrationBuilder.UpdateData(
-                table: "Tasks",
-                keyColumn: "Id",
-                keyValue: 4,
-                column: "CreatedDate",
-                value: new DateTime(2023, 3, 4, 16, 58, 42, 4, DateTimeKind.Local).AddTicks(6577));
         }
     }
 }

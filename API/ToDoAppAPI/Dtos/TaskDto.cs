@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using ToDoAppAPI.Model;
+using ToDoAppAPI.Entities;
 
 namespace ToDoAppAPI.Dtos
 {
@@ -14,7 +14,7 @@ namespace ToDoAppAPI.Dtos
         // DOTO:
         public int? ListId { get; set; }
 
-        public PriorityModel? Priority { get; set; }
+        public PriorityEntity? Priority { get; set; }
 
 
     }

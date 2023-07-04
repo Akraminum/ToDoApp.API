@@ -22,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DataBase\migrations\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
 

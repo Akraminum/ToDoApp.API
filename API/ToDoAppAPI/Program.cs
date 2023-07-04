@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using ToDoAppAPI.DataBase;
+using ToDoAppAPI.Entities;
 using ToDoAppAPI.Services;
 using ToDoAppAPI.Services.IServices;
 
@@ -19,7 +20,7 @@ appBuilder.Services.AddDbContext<AppDbContext>(opt =>
 });
 
 appBuilder.Services
-    .AddIdentityCore<IdentityUser>(options => {
+    .AddIdentityCore<UserEntity>(options => {
         options.SignIn.RequireConfirmedAccount = false;
         options.User.RequireUniqueEmail = true;
         options.Password.RequireDigit = false;
@@ -46,10 +47,19 @@ appBuilder.Services
             ValidAudience = appBuilder.Configuration["Jwt:Audience"],
             ValidIssuer = appBuilder.Configuration["Jwt:Issuer"],
             IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(appBuilder.Configuration["Jwt:Key"])
+                Encoding.UTF8.GetBytes(appBuilder.Configuration["Jwt:Key"]!)
             )
         };
     });
+
+
+appBuilder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("AdminPolicy",
+        policy => policy.RequireAssertion(ctx => 
+            (ctx.User.IsInRole("Admin") || ctx.User.IsInRole("SuperAdmin")) ));
+});
+
 
 
 

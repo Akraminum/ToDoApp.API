@@ -1,10 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using ToDoAppAPI.Dtos.Users.Authenticate;
+using ToDoAppAPI.Entities;
 
 namespace ToDoAppAPI.Services.IServices
 {
     public interface ITokenCreationService
     {
-        public AuthenticationResponseDto CreateToken(IdentityUser user);
+        Task<AuthenticationResponseDto> CreateToken(UserEntity user);
+
     }
 }

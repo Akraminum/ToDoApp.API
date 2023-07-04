@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ToDoAppAPI.Model
+namespace ToDoAppAPI.Entities
 {
-    public class BaseModel
+    public class BaseEntity<TKey>
     {
-        public int Id { get; set; }
+        public TKey Id { get; set; }
     }
 }

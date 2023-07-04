@@ -1,5 +1,4 @@
-﻿using ToDoAppAPI.Model;
-using ToDoAppAPI.Models;
+﻿using ToDoAppAPI.Entities;
 
 namespace ToDoAppAPI.Dtos
 {
@@ -8,9 +7,9 @@ namespace ToDoAppAPI.Dtos
         public int Id { get; set; }
         public string Name { get; set; } = null!;
 
-        public IEnumerable<TaskModel>? Tasks { get; set; }
+        public IEnumerable<TaskEntity>? Tasks { get; set; }
 
-        public IEnumerable<UserModel>? Users { get; set; }
+        public IEnumerable<UserEntity>? Users { get; set; }
 
     }
 }
