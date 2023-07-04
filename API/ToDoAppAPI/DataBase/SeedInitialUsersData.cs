@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ToDoAppAPI.Entities;
+using ToDoAppAPI.Utitlities.Auth;
 
 namespace ToDoAppAPI.DataBase
 {
@@ -29,13 +30,13 @@ namespace ToDoAppAPI.DataBase
                 {
                     Id = SUPER_ADMIN_ROLE_ID,
                     Name = "SuperAdmin",
-                    NormalizedName= "SuperAdmin",
+                    NormalizedName= Roles.SuperAdmin,
                 },
                 new IdentityRole
                 {
                     Id = ADMIN_ROLE_ID,
                     Name = "Admin",
-                    NormalizedName= "Admin",
+                    NormalizedName= Roles.Admin,
                 }
             });
         }

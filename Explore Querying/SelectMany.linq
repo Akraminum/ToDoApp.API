@@ -15,18 +15,14 @@
   </Connection>
 </Query>
 
-Lists.Include(l =>
-	l.Tasks.Where(t => 
-    	t.Title.Contains("p")));
-
-
-Lists.Where(l => true)
-.Include(l =>
-	l.Tasks.Where(t => 
-    	t.Title.Contains("m")));
-		
-		
-
-		
-
-
+//[[ https://stackoverflow.com/questions/7050404/create-code-first-many-to-many-with-additional-fields-in-association-table ]]
+var commentsOfMembers = Users
+    .Where(u => true)
+    .SelectMany(u => u.UsersLists.Select(ul => ul.List))
+    .ToList();
+	
+	
+var ListsOfUsers = UsersLists
+    .Where(ul => ul.User.Id != "Smith")
+    .Select(ul => ul.List)
+    .ToList();

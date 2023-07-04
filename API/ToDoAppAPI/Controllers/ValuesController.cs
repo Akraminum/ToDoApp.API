@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Data;
+using ToDoAppAPI.Utitlities.Auth;
 
 namespace ToDoAppAPI.Controllers
 {
@@ -24,14 +25,14 @@ namespace ToDoAppAPI.Controllers
 
 
         //[Authorize(Roles = "Admin, SuperAdmin")]
-        [Authorize(Policy = "AdminPolicy")]
+        [Authorize(Policy = Policies.AdministrativePolicy)]
         [HttpGet("Admin")]
         public List<string> Admins()
         {
             return GetClaims();
         }
 
-        [Authorize(Roles = "SuperAdmin")]
+        [Authorize(Roles = Roles.SuperAdmin)]
         [HttpGet("SuperAdmin")]
         public List<string> SuperAdmin()
         {

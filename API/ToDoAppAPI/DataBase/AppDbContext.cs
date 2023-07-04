@@ -13,14 +13,15 @@ namespace ToDoAppAPI.DataBase
         public DbSet<ListEntity> Lists { get; set; }
         public DbSet<TaskEntity> Tasks { get; set; }
         public DbSet<PriorityEntity> priorities { get; set; }
-        //public DbSet<StepModel> Steps{ get; set; } 
+        public DbSet<StepEntity> Steps { get; set; }
+        public DbSet<UsersLists> UsersLists { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             SeedInitialUsersData.Seed(modelBuilder);
-
+               
             modelBuilder.Entity<ListEntity>()
                 .HasMany(l => l.AssociatedUsers)
                 .WithMany(u => u.AssociatedLists)
@@ -36,8 +37,6 @@ namespace ToDoAppAPI.DataBase
                         .HasOne(pt => pt.List)
                         .WithMany(t => t.UsersLists)
                         .HasForeignKey(pt => pt.ListId);
-
-
 
                         j.HasKey(t => new { t.UserId, t.ListId });
                         j.ToTable("UsersLists");

@@ -8,6 +8,7 @@ using ToDoAppAPI.DataBase;
 using ToDoAppAPI.Entities;
 using ToDoAppAPI.Services;
 using ToDoAppAPI.Services.IServices;
+using ToDoAppAPI.Utitlities.Auth;
 
 var appBuilder = WebApplication.CreateBuilder(args);
 
@@ -55,9 +56,9 @@ appBuilder.Services
 
 appBuilder.Services.AddAuthorization(options =>
 {
-    options.AddPolicy("AdminPolicy",
+    options.AddPolicy(Policies.AdministrativePolicy,
         policy => policy.RequireAssertion(ctx => 
-            (ctx.User.IsInRole("Admin") || ctx.User.IsInRole("SuperAdmin")) ));
+            (ctx.User.IsInRole(Roles.Admin) || ctx.User.IsInRole(Roles.SuperAdmin)) ));
 });
 
 

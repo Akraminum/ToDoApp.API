@@ -1,15 +1,19 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ToDoAppAPI.Dtos.Users;
 using ToDoAppAPI.Dtos.Users.Authenticate;
 using ToDoAppAPI.Entities;
 using ToDoAppAPI.Services;
 using ToDoAppAPI.Services.IServices;
+using ToDoAppAPI.Utitlities.Auth;
 
 namespace ToDoAppAPI.Controllers
 {
+    [Authorize(Policy = Policies.AdministrativePolicy)]
     [Route("api/[controller]")]
-    [ApiController] 
+    [ApiController]
     public class UsersController : ControllerBase
     {
         private readonly UserManager<UserEntity> _userManager;
@@ -25,14 +29,18 @@ namespace ToDoAppAPI.Controllers
         }
 
 
+        // POST: api/Users
         [HttpPost]
         public async Task<ActionResult<CreateUserOutputDto>> CreateUser(CreateUserInputDto InputDto)
         {
-            //if (!ModelState.IsValid)
-            //    return BadRequest(ModelState);
-
             var result = await _userManager.CreateAsync(
-                new UserEntity() { UserName = InputDto.UserName, Email = InputDto.Email },
+                new UserEntity()
+                {
+                    UserName = InputDto.UserName,
+                    Email = InputDto.Email,
+                    FirstName = InputDto.FirstName,
+                    LastName = InputDto.LastName,
+                },
                 InputDto.Password
             );
 
@@ -45,44 +53,40 @@ namespace ToDoAppAPI.Controllers
                 new CreateUserOutputDto() { Email = InputDto.Email, UserName = InputDto.UserName });
         }
 
-        [HttpGet]
-        public async Task<ActionResult<GetUserOutputDto>> GetUser([FromQuery]GetUserInputDto InputDto)
+        // GET: api/Users?UserName
+        [HttpGet("{UserName}")]
+        public async Task<ActionResult<GetUserOutputDto>> GetUser([FromRoute]GetUserInputDto InputDto)
         {
-            IdentityUser user = await _userManager.FindByNameAsync(InputDto.UserName);
+            UserEntity user = await _userManager.FindByNameAsync(InputDto.UserName);
             if (user == null)
                 return NotFound(new { erroe = "no user found" });
 
             return new GetUserOutputDto
             {
                 UserName = user.UserName,
-                Email = user.Email
+                Email = user.Email,
+                FirstName = user.FirstName, 
+                LastName = user.LastName,
             };
+
         }
 
-
-        // POST: api/Users/BearerToken
-        [HttpPost("BearerToken")]
-        public async Task<ActionResult<AuthenticationResponseDto>> CreateBearerToken(AuthenticationRequestDto request)
+        // GET: api/Users
+        [HttpGet]
+        public async Task<ActionResult<List<GetUserOutputDto>>> GetAllUser()
         {
-            if (!ModelState.IsValid)
+            var users = await _userManager.Users.ToListAsync();
+
+            return users.Select( x => new GetUserOutputDto
             {
-                return BadRequest("Bad credentials");
-            } 
-
-            var user = await _userManager.FindByNameAsync(request.UserName);
-            if (user == null)
-                return BadRequest("Bad credentials");
-
-
-            var isPasswordValid = await _userManager.CheckPasswordAsync(user, request.Password);
-            if (!isPasswordValid)
-                return BadRequest("Bad credentials");
-
-
-            var token = await _jwtService.CreateToken(user);
-
-            return Ok(token);
+                UserName = x.UserName,
+                Email = x.Email,
+                FirstName= x.FirstName,
+                LastName = x.LastName,
+            }).ToList();
         }
+
+
 
     }
 }
