@@ -1,12 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using ToDoAppAPI.Dtos.Users;
-using ToDoAppAPI.Dtos.Users.Authenticate;
 using ToDoAppAPI.Entities;
-using ToDoAppAPI.Services;
 using ToDoAppAPI.Services.IServices;
 using ToDoAppAPI.Utitlities.Auth;
 
@@ -18,15 +16,12 @@ namespace ToDoAppAPI.Controllers
     public class UsersController : ControllerBase
     {
         private readonly UserManager<UserEntity> _userManager;
-        private readonly ITokenCreationService _jwtService;
 
         public UsersController(
-            UserManager<UserEntity> userManager,
-            ITokenCreationService jwtService
+            UserManager<UserEntity> userManager
             )
         {
             _userManager = userManager;
-            _jwtService = jwtService;
         }
 
 
@@ -94,6 +89,10 @@ namespace ToDoAppAPI.Controllers
             if (user == null)
                 return NotFound(new { erroe = "no user found" });
 
+            if (!(await IsValidAuthority(user)))
+                return Forbid();
+
+
             user.FirstName = inputDto.FirstName;
             user.LastName = inputDto.LastName;
             user.Email = inputDto.Email;
@@ -113,9 +112,10 @@ namespace ToDoAppAPI.Controllers
             UserEntity user = await _userManager.FindByNameAsync(userName);
             if (user == null)
                 return NotFound(new { erroe = "no user found" });
-            //(await _userManager.GetRolesAsync(user))
-            //    .Any(r => 
-            //            r.Equals(Roles.Admin) || r.Equals(Roles.SuperAdmin));
+
+            if (!(await IsValidAuthority(user)))
+                return Forbid();
+
 
             var result = await _userManager.DeleteAsync(user);
             if (!result.Succeeded)
@@ -131,18 +131,25 @@ namespace ToDoAppAPI.Controllers
             if (user == null)
                 return NotFound(new { erroe = "no user found" });
 
-            var result = await _userManager.ChangePasswordAsync(user, inputDto.CurrentPassword, inputDto.NewPassword);
+            if (!(await IsValidAuthority(user)))
+                return Forbid();
+
+            user.PasswordHash = _userManager.PasswordHasher
+                    .HashPassword(user, inputDto.NewPassword);
+            var result = await _userManager.UpdateAsync(user);
             if (!result.Succeeded)
                 return BadRequest(result.Errors);
 
             return Accepted();
-
         }
 
 
+                         /////////////////////////////////////////////
+                        /////////////////// ADMINS //////////////////
+                       /////////////////////////////////////////////
         // CreateAdminUser
         [Authorize(Roles = Roles.SuperAdmin)]
-        [HttpPost("admin")]
+        [HttpPost("admins")]
         public async Task<ActionResult<GetUserOutputDto>> CreateAdminUser(CreateUserInputDto InputDto)
         {
             var user = new UserEntity()
@@ -172,34 +179,39 @@ namespace ToDoAppAPI.Controllers
 
         }
 
-
-        // UpdateAdminUser
-        [Authorize(Roles = Roles.SuperAdmin)]
-        [HttpPut("admin/{userName}")]
-        public async Task<ActionResult<UpdateUserOutputDto>> UpdateAdminUser(string userName, UpdateUserInputDto inputDto)
+        [HttpGet("admins")]
+        public async Task<ActionResult<List<GetUserOutputDto>>> getAllAdmins()
         {
-            UserEntity user = await _userManager.FindByNameAsync(userName);
-            if (user == null)
-                return NotFound(new { erroe = "no user found" });
 
-            user.FirstName = inputDto.FirstName;
-            user.LastName = inputDto.LastName;
-            user.Email = inputDto.Email;
-            var result = await _userManager.UpdateAsync(user);
-            if (!result.Succeeded)
-                return BadRequest(result.Errors);
+            var admins = await _userManager.GetUsersInRoleAsync(Roles.Admin);
 
-            return Accepted(new UpdateUserOutputDto
+            return admins.Select(x => new GetUserOutputDto
             {
-                UserName = user.FirstName,
-            });
+                UserName = x.UserName,
+                Email = x.Email,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+            }).ToList();
         }
 
-        // DeleteAdminUser
-        // ResetAdminUserPassword
 
+        // assign admin role
+        // remove admin role
 
+        private async Task<bool> IsValidAuthority(UserEntity targetUser)
+        {
+            bool isTargetingAdmin = (await _userManager.GetRolesAsync(targetUser)).Any();
+            if (isTargetingAdmin)
+            {
+                var isCurrentSupperAdmin = User.Claims.Any(x =>
+                                            x.ValueType.Equals(ClaimTypes.Role) &&
+                                            x.ValueType == Roles.SuperAdmin);
+                if (!isCurrentSupperAdmin)
+                    return false;
+            }
 
+            return true;
+        }
 
     }
 }

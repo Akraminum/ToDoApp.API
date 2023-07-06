@@ -5,6 +5,9 @@ using ToDoAppAPI.Entities;
 using ToDoAppAPI.Services.IServices;
 using ToDoAppAPI.Services;
 using ToDoAppAPI.Dtos.Users.Authenticate;
+using Microsoft.Win32;
+using Microsoft.AspNetCore.Components.Forms;
+using ToDoAppAPI.Dtos.Users;
 
 namespace ToDoAppAPI.Controllers
 {
@@ -26,7 +29,7 @@ namespace ToDoAppAPI.Controllers
 
         // POST: api/Users/BearerToken
         [HttpPost("BearerToken")]
-        public async Task<ActionResult<AuthenticationResponseDto>> CreateBearerToken(AuthenticationRequestDto request)
+        public async Task<ActionResult<AuthenticationResponseDto>> Authonticate(AuthenticationRequestDto request)
         {
 
             var user = await _userManager.FindByNameAsync(request.UserName);
@@ -43,5 +46,34 @@ namespace ToDoAppAPI.Controllers
 
             return Ok(token);
         }
+
+
+        [HttpPost("Register")]
+        public async Task<ActionResult> Register(RegisterInputDto inputDto)
+        {
+            var result = await _userManager.CreateAsync(
+                new UserEntity()
+                {
+                    UserName = inputDto.Email,
+                    Email = inputDto.Email,
+                    FirstName = inputDto.FirstName,
+                    LastName = inputDto.LastName,
+                },
+                inputDto.Password
+            );
+
+            if (!result.Succeeded)
+                return BadRequest(result.Errors);
+
+            return Accepted(new { UserName = inputDto.Email });
+        }
+
+        // send confirmation mail after registering
+
+        // Resend confirmation mail endpoint
+        // send reset password token mail endpoint
+        // reset password with token endpoint
+        // updating self data endpoint
+
     }
 }
