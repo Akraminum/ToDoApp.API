@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -85,6 +86,118 @@ namespace ToDoAppAPI.Controllers
                 LastName = x.LastName,
             }).ToList();
         }
+
+        [HttpPut("{userName}")]
+        public async Task<ActionResult<UpdateUserOutputDto>> UpdateUser(string userName, UpdateUserInputDto inputDto)
+        {
+            UserEntity user = await _userManager.FindByNameAsync(userName);
+            if (user == null)
+                return NotFound(new { erroe = "no user found" });
+
+            user.FirstName = inputDto.FirstName;
+            user.LastName = inputDto.LastName;
+            user.Email = inputDto.Email;
+            var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+                return BadRequest(result.Errors);
+
+            return Accepted(new UpdateUserOutputDto
+            {
+                UserName = user.FirstName,
+            });
+        }
+
+        [HttpDelete("{userName}")]
+        public async Task<ActionResult> DeleteUser(string userName)
+        {
+            UserEntity user = await _userManager.FindByNameAsync(userName);
+            if (user == null)
+                return NotFound(new { erroe = "no user found" });
+            //(await _userManager.GetRolesAsync(user))
+            //    .Any(r => 
+            //            r.Equals(Roles.Admin) || r.Equals(Roles.SuperAdmin));
+
+            var result = await _userManager.DeleteAsync(user);
+            if (!result.Succeeded)
+                return StatusCode(500, result.Errors);
+
+            return NoContent();
+        }
+
+        [HttpPost("{userName}")]
+        public async Task<ActionResult> ResetUserPassword(string userName, ResetUserPasswordInputDto inputDto)
+        {
+            UserEntity user = await _userManager.FindByNameAsync(userName);
+            if (user == null)
+                return NotFound(new { erroe = "no user found" });
+
+            var result = await _userManager.ChangePasswordAsync(user, inputDto.CurrentPassword, inputDto.NewPassword);
+            if (!result.Succeeded)
+                return BadRequest(result.Errors);
+
+            return Accepted();
+
+        }
+
+
+        // CreateAdminUser
+        [Authorize(Roles = Roles.SuperAdmin)]
+        [HttpPost("admin")]
+        public async Task<ActionResult<GetUserOutputDto>> CreateAdminUser(CreateUserInputDto InputDto)
+        {
+            var user = new UserEntity()
+            {
+                UserName = InputDto.UserName,
+                Email = InputDto.Email,
+                FirstName = InputDto.FirstName,
+                LastName = InputDto.LastName,
+            };
+            var result = await _userManager.CreateAsync(
+                user,
+                InputDto.Password
+            );
+            if (!result.Succeeded)
+                return BadRequest(result.Errors);
+
+
+            result = await _userManager.AddToRoleAsync(user, Roles.Admin);
+            if (!result.Succeeded)
+                return BadRequest(result.Errors);
+
+
+            return CreatedAtAction(
+                nameof(GetUser),
+                new { username = InputDto.UserName },
+                new CreateUserOutputDto() { Email = InputDto.Email, UserName = InputDto.UserName });
+
+        }
+
+
+        // UpdateAdminUser
+        [Authorize(Roles = Roles.SuperAdmin)]
+        [HttpPut("admin/{userName}")]
+        public async Task<ActionResult<UpdateUserOutputDto>> UpdateAdminUser(string userName, UpdateUserInputDto inputDto)
+        {
+            UserEntity user = await _userManager.FindByNameAsync(userName);
+            if (user == null)
+                return NotFound(new { erroe = "no user found" });
+
+            user.FirstName = inputDto.FirstName;
+            user.LastName = inputDto.LastName;
+            user.Email = inputDto.Email;
+            var result = await _userManager.UpdateAsync(user);
+            if (!result.Succeeded)
+                return BadRequest(result.Errors);
+
+            return Accepted(new UpdateUserOutputDto
+            {
+                UserName = user.FirstName,
+            });
+        }
+
+        // DeleteAdminUser
+        // ResetAdminUserPassword
+
 
 
 
