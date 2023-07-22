@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using ToDoAppAPI.Dtos.Users;
 using ToDoAppAPI.Entities;
-using ToDoAppAPI.Services.IServices;
 using ToDoAppAPI.Utitlities.Auth;
 
 namespace ToDoAppAPI.Controllers
@@ -167,7 +166,7 @@ namespace ToDoAppAPI.Controllers
                 return BadRequest(result.Errors);
 
 
-            result = await _userManager.AddToRoleAsync(user, Roles.Admin);
+            result = await _userManager.AddToRoleAsync(user, Roles.Admin); 
             if (!result.Succeeded)
                 return BadRequest(result.Errors);
 
