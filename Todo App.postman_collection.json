@@ -1,0 +1,520 @@
+{
+	"info": {
+		"_postman_id": "a591dccf-d390-44a1-b38d-0dc86e9a2526",
+		"name": "Todo App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27124892",
+		"_collection_link": "https://www.postman.com/aspnet-core-workshop/workspace/resume-projects/collection/27124892-a591dccf-d390-44a1-b38d-0dc86e9a2526?action=share&creator=27124892&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Authenticate",
+			"item": [
+				{
+					"name": "PolicyTEST",
+					"item": [
+						{
+							"name": "AuthorizeTest:Anonymouse",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Values/Anonymous",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Values",
+										"Anonymous"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AuthorizeTest:User",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Values/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Values",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AuthorizeTest:Admin",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Values/admin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Values",
+										"admin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "AuthorizeTest:SupperAdmin",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/Values/SuperAdmin",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"Values",
+										"SuperAdmin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authonticate as super admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"// console.log(jsonData.token);\r",
+									"pm.collectionVariables.set(\"JWTToken\", jsonData.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"SuperAdmin\",\r\n  \"password\": \"123qwe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Auth/BearerToken",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Auth",
+								"BearerToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authonticate as admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"// console.log(jsonData.token);\r",
+									"pm.collectionVariables.set(\"JWTToken\", jsonData.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"{{AdminUserName}}\",\r\n  \"password\": \"123qwe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Auth/BearerToken",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Auth",
+								"BearerToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Authonticate User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"// console.log(jsonData.token);\r",
+									"pm.collectionVariables.set(\"JWTToken\", jsonData.token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"userName\": \"{{UserName}}\",\r\n  \"password\": \"123qwe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Auth/BearerToken",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Auth",
+								"BearerToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"pm.collectionVariables.set(\"UserName\", jsonData.userName);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"{{$randomFirstName}}\" ,\r\n  \"lastName\": \"{{$randomLastName}}\",\r\n  \"userName\": \"{{$randomUserName}}\",\r\n  \"password\": \"123qwe\",\r\n  \"email\": \"{{$randomEmail}}\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Auth/Register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Auth",
+								"Register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "GetUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/Users/{{UserName}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Users",
+								"{{UserName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/Users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllAdmins",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/Users/admins",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Users",
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"pm.collectionVariables.set(\"UserName\", jsonData.userName);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"{{$randomFirstName}}\" ,\r\n  \"lastName\": \"{{$randomLastName}}\",\r\n  \"userName\": \"{{$randomUserName}}\",\r\n  \"password\": \"123qwe\",\r\n  \"email\": \"{{$randomEmail}}\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Users",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CreateAdminUser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"pm.collectionVariables.set(\"AdminUserName\", jsonData.userName);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"{{$randomFirstName}}\" ,\r\n  \"lastName\": \"{{$randomLastName}}\",\r\n  \"userName\": \"admin.{{$randomUserName}}\",\r\n  \"password\": \"123qwe\",\r\n  \"email\": \"{{$randomEmail}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Users/admins",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Users",
+								"admins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeUserPassowrd",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CurrentPassword\": \"123qwe\" ,\r\n  \"NewPassword\": \"123qwe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Users/{{UserName}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Users",
+								"{{UserName}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ChangeAdminPassowrd",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"CurrentPassword\": \"123qwe\" ,\r\n  \"NewPassword\": \"123qwe\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/Users/{{AdminUserName}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"Users",
+								"{{AdminUserName}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{JWTToken}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:7244/api",
+			"type": "string"
+		},
+		{
+			"key": "JWTToken",
+			"value": ""
+		},
+		{
+			"key": "UserName",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "AdminUserName",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

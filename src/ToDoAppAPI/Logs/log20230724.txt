@@ -1,0 +1,59 @@
+2023-07-24 17:02:15.708 +03:00 [INF] User profile is available. Using 'C:\Users\Akram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-24 17:02:16.063 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-24 17:02:16.071 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-24 17:02:16.077 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-24 17:02:16.079 +03:00 [INF] Hosting environment: Production
+2023-07-24 17:02:16.082 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-24 17:02:26.587 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7244/api/values/Exception - -
+2023-07-24 17:02:26.709 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.ValuesController.Exception (ToDoAppAPI)'
+2023-07-24 17:02:26.730 +03:00 [INF] Route matched with {action = "Exception", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Exception() on controller ToDoAppAPI.Controllers.ValuesController (ToDoAppAPI).
+2023-07-24 17:02:26.739 +03:00 [INF] Executed action ToDoAppAPI.Controllers.ValuesController.Exception (ToDoAppAPI) in 1.7649ms
+2023-07-24 17:02:26.744 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.ValuesController.Exception (ToDoAppAPI)'
+2023-07-24 17:02:26.745 +03:00 [ERR] The requested weather forecast exists (e0c33f6f-381e-4857-b1c0-253fc4bc7632)
+ToDoAppAPI.Exceptions.EntityExistsException: The requested weather forecast exists
+   at ToDoAppAPI.Controllers.ValuesController.Exception() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ValuesController.cs:line 55
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-24 17:02:26.997 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7244/api/values/Exception - - - 409 - application/problem+json 414.1690ms
+2023-07-24 17:02:36.690 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7244/api/values/Exception - -
+2023-07-24 17:02:36.701 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.ValuesController.Exception (ToDoAppAPI)'
+2023-07-24 17:02:36.708 +03:00 [INF] Route matched with {action = "Exception", controller = "Values"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Exception() on controller ToDoAppAPI.Controllers.ValuesController (ToDoAppAPI).
+2023-07-24 17:02:36.710 +03:00 [INF] Executed action ToDoAppAPI.Controllers.ValuesController.Exception (ToDoAppAPI) in 0.5006ms
+2023-07-24 17:02:36.712 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.ValuesController.Exception (ToDoAppAPI)'
+2023-07-24 17:02:36.713 +03:00 [ERR] The requested weather forecast exists (f1eae52d-01de-4a72-96a7-9131d3f2591a)
+ToDoAppAPI.Exceptions.EntityExistsException: The requested weather forecast exists
+   at ToDoAppAPI.Controllers.ValuesController.Exception() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ValuesController.cs:line 55
+   at lambda_method2(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-24 17:02:36.740 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7244/api/values/Exception - - - 409 - application/problem+json 50.0547ms
+2023-07-24 17:03:37.366 +03:00 [INF] Application is shutting down...
