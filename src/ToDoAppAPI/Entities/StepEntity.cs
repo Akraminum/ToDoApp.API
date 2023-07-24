@@ -19,8 +19,12 @@ namespace ToDoAppAPI.Entities
         [ForeignKey("TaskId")]
         public TaskEntity? Task { get; set; }
 
-        public int UserCreatedId { get; set; }
-        [ForeignKey("UserCreatedId")]
-        public TaskEntity? UserCreated { get; set; }
+        public int OwnerId { get; set; }
+        [ForeignKey("OwnerId")]
+        public TaskEntity? Owner { get; set; }
+
+        public string? UserCompletedId { get; set; } = null!;
+        [ForeignKey(nameof(UserCompletedId))]
+        public UserEntity? UserCompleted { get; set; }
     }
 }

@@ -16,11 +16,10 @@ namespace ToDoAppAPI.Entities
         public string? Description { get; set; }
         public bool IsComplete { get; set; } = false;
         public DateTime DateCreated { get; set; } = DateTime.Now;
-        public DateTime? DateDue { get; set; }
-        public DateTime? DateCompleted { get; set; }
+        public DateTime? DateDue { get; set; } = null;
+        public DateTime? DateCompleted { get; set; } = null;
 
 
-        // DOTO:
         #region Periority rel
         public int? PriorityId { get; set; }
         [ForeignKey(nameof(PriorityId))]
@@ -36,13 +35,19 @@ namespace ToDoAppAPI.Entities
 
 
         #region user_created_rel
-        public string UserCreatedId { get; set; } = null!;
-        [ForeignKey(nameof(UserCreatedId))]
-        public UserEntity? UserCreated { get; set; }
+        public string OwnerId { get; set; } = null!;
+        [ForeignKey(nameof(OwnerId))]
+        public UserEntity? Owner { get; set; }
+        #endregion
+
+        #region user_completed_rel
+        public string? UserCompletedId { get; set; } = null!;
+        [ForeignKey(nameof(UserCompletedId))]
+        public UserEntity? UserCompleted { get; set; }
         #endregion
 
         #region Steps rel
-        //public IEnumerable<StepEntity>? Steps { get; set; }
+        public IEnumerable<StepEntity>? Steps { get; set; }
         #endregion
 
     }

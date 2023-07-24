@@ -9,10 +9,10 @@ using ToDoAppAPI.DataBase;
 
 #nullable disable
 
-namespace ToDoAppAPI.Migrations
+namespace ToDoAppAPI.DataBase.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230630184047_Identity")]
+    [Migration("20230723160902_Identity")]
     partial class Identity
     {
         /// <inheritdoc />
@@ -158,7 +158,7 @@ namespace ToDoAppAPI.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("ToDoAppAPI.Model.UserEntity", b =>
+            modelBuilder.Entity("ToDoAppAPI.Entities.UserEntity", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -242,7 +242,7 @@ namespace ToDoAppAPI.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("ToDoAppAPI.Model.UserEntity", null)
+                    b.HasOne("ToDoAppAPI.Entities.UserEntity", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -251,7 +251,7 @@ namespace ToDoAppAPI.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("ToDoAppAPI.Model.UserEntity", null)
+                    b.HasOne("ToDoAppAPI.Entities.UserEntity", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -266,7 +266,7 @@ namespace ToDoAppAPI.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ToDoAppAPI.Model.UserEntity", null)
+                    b.HasOne("ToDoAppAPI.Entities.UserEntity", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -275,7 +275,7 @@ namespace ToDoAppAPI.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("ToDoAppAPI.Model.UserEntity", null)
+                    b.HasOne("ToDoAppAPI.Entities.UserEntity", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)

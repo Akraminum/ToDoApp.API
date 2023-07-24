@@ -4,10 +4,10 @@
 
 #pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
 
-namespace ToDoAppAPI.Migrations
+namespace ToDoAppAPI.DataBase.Migrations
 {
     /// <inheritdoc />
-    public partial class SeedInitialUsers : Migration
+    public partial class SeedAdmin : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,8 +17,8 @@ namespace ToDoAppAPI.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "418b7878-e84f-4ec4-adfe-af185e4287ef", "d6791198-0853-4ed8-ad69-ddb047ec95c3", "SuperAdmin", "SuperAdmin" },
-                    { "b46db6c5-c6bd-484e-bf49-7a4d3704c4db", "25ea29b0-b7f3-49b4-be33-51e4a06d680d", "Admin", "Admin" }
+                    { "4e2f9568-61b6-4129-99d6-a8d3725cde6a", "a07aa530-3a97-49e4-8e9c-eb4cd6e3d6fe", "Admin", "Admin" },
+                    { "9c59c5b3-e227-492c-9122-9acaea064531", "4959ccf7-8f07-4a47-ac3f-e8e1956adf85", "SuperAdmin", "SuperAdmin" }
                 });
 
             migrationBuilder.InsertData(
@@ -26,8 +26,8 @@ namespace ToDoAppAPI.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { "5b9f1a58-5e23-4983-a50a-4cf26e51fb05", 0, "3337642d-bd62-4773-90b3-3b204d12547b", "superadmin@site.com", true, "admin", "admin", false, null, null, "SUPERADMIN", "AQAAAAEAACcQAAAAEKsVS+/JyQON0kgTYq4zbKF8J2yuRgIAr6O+uyHXLYVQJAlzBGajQq+JlGSe21334w==", null, false, "40f52738-2af0-44b0-bcd9-05854f69d040", false, "SuperAdmin" },
-                    { "92d6e1af-cd2b-4f97-9221-9b380afec500", 0, "1a1ac41e-3732-465e-b54a-d3d9a4ac591a", "admin@site.com", true, "admin", "admin", false, null, null, "Admin", "AQAAAAEAACcQAAAAEMcLsJXmEJESFZ//25VrLrkXN88I8tOFcLIyeQA6nVFSMzMFFooNjwaIDNhCvt3PWQ==", null, false, "be0f5c3c-45c4-46ca-916e-987f1c5987d1", false, "Admin" }
+                    { "9dbe76be-dd98-4bfe-bb7b-2bcd19a6f43b", 0, "6542247a-7d34-46be-9db4-3eb0bb7b3e7e", "superadmin@site.com", true, "admin", "admin", false, null, null, "SUPERADMIN", "AQAAAAEAACcQAAAAEMtzuYMj36D3GW9Zg1zD28WjZJw75/CzVyozEURdvN0fyOFnteuS0dRzYizsf7YlWg==", null, false, "333f8c48-dba5-4a47-b841-79276c7ea56a", false, "SuperAdmin" },
+                    { "aeaa4c68-ffa4-4804-af2e-282c4487c9e2", 0, "fd1721a5-feab-42fc-bc69-0df041ae6853", "admin@site.com", true, "admin", "admin", false, null, null, "Admin", "AQAAAAEAACcQAAAAEGCiFFF5LOEWwEZEbGzXAMlomlSa1mPEizvHnl8c5ytVghZxUUbtoFribvCWOodF6g==", null, false, "c51f0c10-dff8-4e08-a24a-3db18b6c7bb8", false, "Admin" }
                 });
 
             migrationBuilder.InsertData(
@@ -35,8 +35,8 @@ namespace ToDoAppAPI.Migrations
                 columns: new[] { "RoleId", "UserId" },
                 values: new object[,]
                 {
-                    { "418b7878-e84f-4ec4-adfe-af185e4287ef", "5b9f1a58-5e23-4983-a50a-4cf26e51fb05" },
-                    { "b46db6c5-c6bd-484e-bf49-7a4d3704c4db", "92d6e1af-cd2b-4f97-9221-9b380afec500" }
+                    { "9c59c5b3-e227-492c-9122-9acaea064531", "9dbe76be-dd98-4bfe-bb7b-2bcd19a6f43b" },
+                    { "4e2f9568-61b6-4129-99d6-a8d3725cde6a", "aeaa4c68-ffa4-4804-af2e-282c4487c9e2" }
                 });
         }
 
@@ -46,32 +46,32 @@ namespace ToDoAppAPI.Migrations
             migrationBuilder.DeleteData(
                 table: "AspNetUserRoles",
                 keyColumns: new[] { "RoleId", "UserId" },
-                keyValues: new object[] { "418b7878-e84f-4ec4-adfe-af185e4287ef", "5b9f1a58-5e23-4983-a50a-4cf26e51fb05" });
+                keyValues: new object[] { "9c59c5b3-e227-492c-9122-9acaea064531", "9dbe76be-dd98-4bfe-bb7b-2bcd19a6f43b" });
 
             migrationBuilder.DeleteData(
                 table: "AspNetUserRoles",
                 keyColumns: new[] { "RoleId", "UserId" },
-                keyValues: new object[] { "b46db6c5-c6bd-484e-bf49-7a4d3704c4db", "92d6e1af-cd2b-4f97-9221-9b380afec500" });
+                keyValues: new object[] { "4e2f9568-61b6-4129-99d6-a8d3725cde6a", "aeaa4c68-ffa4-4804-af2e-282c4487c9e2" });
 
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "418b7878-e84f-4ec4-adfe-af185e4287ef");
+                keyValue: "4e2f9568-61b6-4129-99d6-a8d3725cde6a");
 
             migrationBuilder.DeleteData(
                 table: "AspNetRoles",
                 keyColumn: "Id",
-                keyValue: "b46db6c5-c6bd-484e-bf49-7a4d3704c4db");
+                keyValue: "9c59c5b3-e227-492c-9122-9acaea064531");
 
             migrationBuilder.DeleteData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
-                keyValue: "5b9f1a58-5e23-4983-a50a-4cf26e51fb05");
+                keyValue: "9dbe76be-dd98-4bfe-bb7b-2bcd19a6f43b");
 
             migrationBuilder.DeleteData(
                 table: "AspNetUsers",
                 keyColumn: "Id",
-                keyValue: "92d6e1af-cd2b-4f97-9221-9b380afec500");
+                keyValue: "aeaa4c68-ffa4-4804-af2e-282c4487c9e2");
         }
     }
 }

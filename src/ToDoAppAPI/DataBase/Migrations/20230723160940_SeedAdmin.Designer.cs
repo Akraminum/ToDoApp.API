@@ -9,11 +9,11 @@ using ToDoAppAPI.DataBase;
 
 #nullable disable
 
-namespace ToDoAppAPI.Migrations
+namespace ToDoAppAPI.DataBase.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230704175417_UsersLists")]
-    partial class UsersLists
+    [Migration("20230723160940_SeedAdmin")]
+    partial class SeedAdmin
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,15 +54,15 @@ namespace ToDoAppAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c5fd9791-0841-458f-bf8b-6b419f567665",
-                            ConcurrencyStamp = "465c1644-228e-45dc-9da9-a0b7b85eb110",
+                            Id = "9c59c5b3-e227-492c-9122-9acaea064531",
+                            ConcurrencyStamp = "4959ccf7-8f07-4a47-ac3f-e8e1956adf85",
                             Name = "SuperAdmin",
                             NormalizedName = "SuperAdmin"
                         },
                         new
                         {
-                            Id = "ad36de2a-9d4c-4dae-93a9-61bd455e6687",
-                            ConcurrencyStamp = "cb0010d7-4a1b-4937-9cfd-354254780ec1",
+                            Id = "4e2f9568-61b6-4129-99d6-a8d3725cde6a",
+                            ConcurrencyStamp = "a07aa530-3a97-49e4-8e9c-eb4cd6e3d6fe",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         });
@@ -157,13 +157,13 @@ namespace ToDoAppAPI.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "3d0e6a4d-45e4-409e-90b9-18c449e90ea5",
-                            RoleId = "c5fd9791-0841-458f-bf8b-6b419f567665"
+                            UserId = "9dbe76be-dd98-4bfe-bb7b-2bcd19a6f43b",
+                            RoleId = "9c59c5b3-e227-492c-9122-9acaea064531"
                         },
                         new
                         {
-                            UserId = "9367e1f4-a44a-404e-934e-276872bc6e81",
-                            RoleId = "ad36de2a-9d4c-4dae-93a9-61bd455e6687"
+                            UserId = "aeaa4c68-ffa4-4804-af2e-282c4487c9e2",
+                            RoleId = "4e2f9568-61b6-4129-99d6-a8d3725cde6a"
                         });
                 });
 
@@ -184,23 +184,6 @@ namespace ToDoAppAPI.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
-                });
-
-            modelBuilder.Entity("ToDoAppAPI.Entities.ListEntity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Lists");
                 });
 
             modelBuilder.Entity("ToDoAppAPI.Entities.UserEntity", b =>
@@ -278,56 +261,38 @@ namespace ToDoAppAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "3d0e6a4d-45e4-409e-90b9-18c449e90ea5",
+                            Id = "9dbe76be-dd98-4bfe-bb7b-2bcd19a6f43b",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "504ccc14-7f61-4afd-84ff-fd8b65940795",
+                            ConcurrencyStamp = "6542247a-7d34-46be-9db4-3eb0bb7b3e7e",
                             Email = "superadmin@site.com",
                             EmailConfirmed = true,
                             FirstName = "admin",
                             LastName = "admin",
                             LockoutEnabled = false,
                             NormalizedUserName = "SUPERADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAEOKVoW3fDhBs2DxKKw9sfv1/Ah5mSOP7xjm4m8USTNzQL7trpOdVTGhUE9Jowj1KMg==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMtzuYMj36D3GW9Zg1zD28WjZJw75/CzVyozEURdvN0fyOFnteuS0dRzYizsf7YlWg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "54a21445-1fcb-4f57-92ee-db7338c0af97",
+                            SecurityStamp = "333f8c48-dba5-4a47-b841-79276c7ea56a",
                             TwoFactorEnabled = false,
                             UserName = "SuperAdmin"
                         },
                         new
                         {
-                            Id = "9367e1f4-a44a-404e-934e-276872bc6e81",
+                            Id = "aeaa4c68-ffa4-4804-af2e-282c4487c9e2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "cd69c4df-fcbd-4b8f-8736-b7792f575e70",
+                            ConcurrencyStamp = "fd1721a5-feab-42fc-bc69-0df041ae6853",
                             Email = "admin@site.com",
                             EmailConfirmed = true,
                             FirstName = "admin",
                             LastName = "admin",
                             LockoutEnabled = false,
                             NormalizedUserName = "Admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEIFPFJ6VcZfeYCRQCqrk3nz0aqh2oRZuVlSq+tP9484p34uTNrINe4lZkB4KWsojhQ==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGCiFFF5LOEWwEZEbGzXAMlomlSa1mPEizvHnl8c5ytVghZxUUbtoFribvCWOodF6g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ec64051a-d5af-4648-9088-cccd60e90a4b",
+                            SecurityStamp = "c51f0c10-dff8-4e08-a24a-3db18b6c7bb8",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
-                });
-
-            modelBuilder.Entity("ToDoAppAPI.Entities.UsersLists", b =>
-                {
-                    b.Property<string>("UserId")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("ListId")
-                        .HasColumnType("int");
-
-                    b.Property<byte>("AccessLevel")
-                        .HasColumnType("tinyint");
-
-                    b.HasKey("UserId", "ListId");
-
-                    b.HasIndex("ListId");
-
-                    b.ToTable("UsersLists", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -379,35 +344,6 @@ namespace ToDoAppAPI.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("ToDoAppAPI.Entities.UsersLists", b =>
-                {
-                    b.HasOne("ToDoAppAPI.Entities.ListEntity", "List")
-                        .WithMany("UsersLists")
-                        .HasForeignKey("ListId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ToDoAppAPI.Entities.UserEntity", "User")
-                        .WithMany("UsersLists")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("List");
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("ToDoAppAPI.Entities.ListEntity", b =>
-                {
-                    b.Navigation("UsersLists");
-                });
-
-            modelBuilder.Entity("ToDoAppAPI.Entities.UserEntity", b =>
-                {
-                    b.Navigation("UsersLists");
                 });
 #pragma warning restore 612, 618
         }

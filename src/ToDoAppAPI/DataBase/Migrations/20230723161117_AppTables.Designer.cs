@@ -9,11 +9,11 @@ using ToDoAppAPI.DataBase;
 
 #nullable disable
 
-namespace ToDoAppAPI.Migrations
+namespace ToDoAppAPI.DataBase.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230704181638_Steps")]
-    partial class Steps
+    [Migration("20230723161117_AppTables")]
+    partial class AppTables
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,15 +54,15 @@ namespace ToDoAppAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "5db03782-e490-4cc8-87c0-4e47ccda4011",
-                            ConcurrencyStamp = "26991085-3a90-4ee1-8540-a4f52de28635",
+                            Id = "687cac65-58c1-4bbe-b77f-ed566d8b6058",
+                            ConcurrencyStamp = "b8fbefaa-7a80-431f-a8ca-464b58ab9d82",
                             Name = "SuperAdmin",
                             NormalizedName = "SuperAdmin"
                         },
                         new
                         {
-                            Id = "d01076ae-d6c5-4750-a05d-a67311630904",
-                            ConcurrencyStamp = "36d64c85-2023-43d2-ae1b-afd0269a0566",
+                            Id = "87f5da21-78ae-4550-a9e4-1485196a0b53",
+                            ConcurrencyStamp = "bc54b1a9-ba0d-4916-94bc-cd20f0a697c6",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         });
@@ -157,13 +157,13 @@ namespace ToDoAppAPI.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "22bbc676-c1ce-4669-be87-173ac66decc1",
-                            RoleId = "5db03782-e490-4cc8-87c0-4e47ccda4011"
+                            UserId = "8c260fcf-6d61-474c-871f-1e5a2e5c0ac2",
+                            RoleId = "687cac65-58c1-4bbe-b77f-ed566d8b6058"
                         },
                         new
                         {
-                            UserId = "0e1ce120-3b9f-446f-be08-5f9ef2f3cdc9",
-                            RoleId = "d01076ae-d6c5-4750-a05d-a67311630904"
+                            UserId = "da28bcb9-930a-4b7c-9eee-fc1dfe347fed",
+                            RoleId = "87f5da21-78ae-4550-a9e4-1485196a0b53"
                         });
                 });
 
@@ -196,9 +196,16 @@ namespace ToDoAppAPI.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("OwnerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("OwnerId", "Name")
+                        .IsUnique();
 
                     b.ToTable("Lists");
                 });
@@ -243,19 +250,24 @@ namespace ToDoAppAPI.Migrations
                     b.Property<bool>("IsComplete")
                         .HasColumnType("bit");
 
+                    b.Property<int>("OwnerId")
+                        .HasColumnType("int");
+
                     b.Property<int>("TaskId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserCreatedId")
-                        .HasColumnType("int");
+                    b.Property<string>("UserCompletedId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("OwnerId");
+
                     b.HasIndex("TaskId");
 
-                    b.HasIndex("UserCreatedId");
+                    b.HasIndex("UserCompletedId");
 
-                    b.ToTable("StepEntity");
+                    b.ToTable("Steps");
                 });
 
             modelBuilder.Entity("ToDoAppAPI.Entities.TaskEntity", b =>
@@ -284,6 +296,10 @@ namespace ToDoAppAPI.Migrations
                     b.Property<int>("ListId")
                         .HasColumnType("int");
 
+                    b.Property<string>("OwnerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<int?>("PriorityId")
                         .HasColumnType("int");
 
@@ -292,17 +308,18 @@ namespace ToDoAppAPI.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("UserCreatedId")
-                        .IsRequired()
+                    b.Property<string>("UserCompletedId")
                         .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("ListId");
 
+                    b.HasIndex("OwnerId");
+
                     b.HasIndex("PriorityId");
 
-                    b.HasIndex("UserCreatedId");
+                    b.HasIndex("UserCompletedId");
 
                     b.ToTable("Tasks");
                 });
@@ -382,35 +399,35 @@ namespace ToDoAppAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "22bbc676-c1ce-4669-be87-173ac66decc1",
+                            Id = "8c260fcf-6d61-474c-871f-1e5a2e5c0ac2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1f90c57c-ca1c-4183-a75e-9884da58935d",
+                            ConcurrencyStamp = "64d51411-6902-46bb-affa-b7ceb3b3b749",
                             Email = "superadmin@site.com",
                             EmailConfirmed = true,
                             FirstName = "admin",
                             LastName = "admin",
                             LockoutEnabled = false,
                             NormalizedUserName = "SUPERADMIN",
-                            PasswordHash = "AQAAAAEAACcQAAAAECNA9SCWYVBKk85k37Kqco/Q/56i2fc2QGE4VtSt7qH9+Ej7ajS8imJDtkJQPsUG/g==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEGQLeFXHsbEuXGGECfXBuV6/9ZsG7v5UWGrkRlBXLrkJ695cGzKgn9sieIeZ6PhYhg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "811a7fdc-d0a0-4e31-9657-c20a57afb523",
+                            SecurityStamp = "b1dd2755-8789-44f9-8c45-b41b59bec660",
                             TwoFactorEnabled = false,
                             UserName = "SuperAdmin"
                         },
                         new
                         {
-                            Id = "0e1ce120-3b9f-446f-be08-5f9ef2f3cdc9",
+                            Id = "da28bcb9-930a-4b7c-9eee-fc1dfe347fed",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "dbf89617-fa3f-4091-9a75-d7273cfabfa7",
+                            ConcurrencyStamp = "70f89270-0d2b-4d92-ae88-426b41370257",
                             Email = "admin@site.com",
                             EmailConfirmed = true,
                             FirstName = "admin",
                             LastName = "admin",
                             LockoutEnabled = false,
                             NormalizedUserName = "Admin",
-                            PasswordHash = "AQAAAAEAACcQAAAAEDNjt1m5Jv0M9wDgU7Uo3KObly/uEePIflAq3Y3xy+nU4SPhZmCfOyfcx8SxYIUrqw==",
+                            PasswordHash = "AQAAAAEAACcQAAAAEMgnkLFJKGWZ/xTjaHa9w/6Fnle4tXRvyOfHG76qtavYQ7kjNLCTUzTMMKkVuOmrSQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "0226c553-55f4-4ce9-b3fa-557c3c9000da",
+                            SecurityStamp = "c1fc2e70-42da-47a9-b5fa-2f9e0c13030a",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
@@ -423,9 +440,6 @@ namespace ToDoAppAPI.Migrations
 
                     b.Property<int>("ListId")
                         .HasColumnType("int");
-
-                    b.Property<byte>("AccessLevel")
-                        .HasColumnType("tinyint");
 
                     b.HasKey("UserId", "ListId");
 
@@ -485,31 +499,55 @@ namespace ToDoAppAPI.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("ToDoAppAPI.Entities.ListEntity", b =>
+                {
+                    b.HasOne("ToDoAppAPI.Entities.UserEntity", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Owner");
+                });
+
             modelBuilder.Entity("ToDoAppAPI.Entities.StepEntity", b =>
                 {
-                    b.HasOne("ToDoAppAPI.Entities.TaskEntity", "Task")
+                    b.HasOne("ToDoAppAPI.Entities.TaskEntity", "Owner")
                         .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("ToDoAppAPI.Entities.TaskEntity", "Task")
+                        .WithMany("Steps")
                         .HasForeignKey("TaskId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("ToDoAppAPI.Entities.TaskEntity", "UserCreated")
+                    b.HasOne("ToDoAppAPI.Entities.UserEntity", "UserCompleted")
                         .WithMany()
-                        .HasForeignKey("UserCreatedId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .HasForeignKey("UserCompletedId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Owner");
 
                     b.Navigation("Task");
 
-                    b.Navigation("UserCreated");
+                    b.Navigation("UserCompleted");
                 });
 
             modelBuilder.Entity("ToDoAppAPI.Entities.TaskEntity", b =>
                 {
                     b.HasOne("ToDoAppAPI.Entities.ListEntity", "List")
-                        .WithMany()
+                        .WithMany("Tasks")
                         .HasForeignKey("ListId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ToDoAppAPI.Entities.UserEntity", "Owner")
+                        .WithMany()
+                        .HasForeignKey("OwnerId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("ToDoAppAPI.Entities.PriorityEntity", "Priority")
@@ -517,17 +555,18 @@ namespace ToDoAppAPI.Migrations
                         .HasForeignKey("PriorityId")
                         .OnDelete(DeleteBehavior.SetNull);
 
-                    b.HasOne("ToDoAppAPI.Entities.UserEntity", "UserCreated")
+                    b.HasOne("ToDoAppAPI.Entities.UserEntity", "UserCompleted")
                         .WithMany()
-                        .HasForeignKey("UserCreatedId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("UserCompletedId")
+                        .OnDelete(DeleteBehavior.Restrict);
 
                     b.Navigation("List");
 
+                    b.Navigation("Owner");
+
                     b.Navigation("Priority");
 
-                    b.Navigation("UserCreated");
+                    b.Navigation("UserCompleted");
                 });
 
             modelBuilder.Entity("ToDoAppAPI.Entities.UsersLists", b =>
@@ -535,7 +574,7 @@ namespace ToDoAppAPI.Migrations
                     b.HasOne("ToDoAppAPI.Entities.ListEntity", "List")
                         .WithMany("UsersLists")
                         .HasForeignKey("ListId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("ToDoAppAPI.Entities.UserEntity", "User")
@@ -551,7 +590,14 @@ namespace ToDoAppAPI.Migrations
 
             modelBuilder.Entity("ToDoAppAPI.Entities.ListEntity", b =>
                 {
+                    b.Navigation("Tasks");
+
                     b.Navigation("UsersLists");
+                });
+
+            modelBuilder.Entity("ToDoAppAPI.Entities.TaskEntity", b =>
+                {
+                    b.Navigation("Steps");
                 });
 
             modelBuilder.Entity("ToDoAppAPI.Entities.UserEntity", b =>

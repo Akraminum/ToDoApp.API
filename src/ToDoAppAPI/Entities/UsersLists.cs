@@ -7,8 +7,5 @@
 
         public int ListId { get; set; }
         public ListEntity? List { get; set; }
-
-
-        public byte AccessLevel { get; set; }
     }
 }

@@ -20,7 +20,6 @@ namespace ToDoAppAPI.DataBase
             AssignRoles(builder);
         }
 
-
         private static void SeedRoles(ModelBuilder builder)
         {
             //seed admin role
@@ -29,13 +28,13 @@ namespace ToDoAppAPI.DataBase
                 new IdentityRole
                 {
                     Id = SUPER_ADMIN_ROLE_ID,
-                    Name = "SuperAdmin",
+                    Name = Roles.SuperAdmin,
                     NormalizedName= Roles.SuperAdmin,
                 },
                 new IdentityRole
                 {
                     Id = ADMIN_ROLE_ID,
-                    Name = "Admin",
+                    Name = Roles.Admin,
                     NormalizedName= Roles.Admin,
                 }
             });
@@ -43,7 +42,6 @@ namespace ToDoAppAPI.DataBase
         
         private static void SeedAdmins(ModelBuilder builder)
         {
-
             //create users
             var SuperAdmin = new UserEntity
             {
@@ -66,7 +64,6 @@ namespace ToDoAppAPI.DataBase
                 NormalizedUserName = "Admin"
             };
 
-
             //set user password
             PasswordHasher<UserEntity> ph = new PasswordHasher<UserEntity>();
             SuperAdmin.PasswordHash = ph.HashPassword(SuperAdmin, "123qwe");
@@ -79,7 +76,6 @@ namespace ToDoAppAPI.DataBase
 
         private static void AssignRoles(ModelBuilder builder)
         {
-
             //set user role to admin
             builder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>[]
             {
