@@ -4,7 +4,7 @@ using ToDoAppAPI.Entities;
 
 namespace ToDoAppAPI.Mappers
 {
-    public class ListProfile: Profile
+    public class ListProfile : Profile
     {
         public ListProfile()
         {

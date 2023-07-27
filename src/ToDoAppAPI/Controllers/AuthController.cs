@@ -8,6 +8,8 @@ using ToDoAppAPI.Dtos.Users.Authenticate;
 using Microsoft.Win32;
 using Microsoft.AspNetCore.Components.Forms;
 using ToDoAppAPI.Dtos.Users;
+using ToDoAppAPI.Exceptions;
+using System.ComponentModel.DataAnnotations;
 
 namespace ToDoAppAPI.Controllers
 {
@@ -31,15 +33,13 @@ namespace ToDoAppAPI.Controllers
         [HttpPost("BearerToken")]
         public async Task<ActionResult<AuthenticationResponseDto>> Authonticate(AuthenticationRequestDto request)
         {
-
             var user = await _userManager.FindByNameAsync(request.UserName);
             if (user == null)
-                return BadRequest("Bad UserName");
-
+                throw new BadRequestExeption("Invalid UserName");
 
             var isPasswordValid = await _userManager.CheckPasswordAsync(user, request.Password);
             if (!isPasswordValid)
-                return BadRequest("Bad Password");
+                throw new BadRequestExeption("Invalid Password");
 
 
             var token = await _jwtService.CreateToken(user);
@@ -63,7 +63,9 @@ namespace ToDoAppAPI.Controllers
             );
 
             if (!result.Succeeded)
+            {
                 return BadRequest(result.Errors);
+            }
 
             return Accepted(new { UserName = inputDto.Email });
         }

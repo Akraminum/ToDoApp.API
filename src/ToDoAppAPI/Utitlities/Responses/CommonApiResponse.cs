@@ -5,7 +5,7 @@ namespace ToDoAppAPI.Utitlities.Responses;
 
 public class CommonApiResponse
 {
-    public static CommonApiResponse Create(HttpStatusCode statusCode, object result = null)
+    public static CommonApiResponse Create(HttpStatusCode statusCode, object? result = null)
         {
             return new CommonApiResponse(statusCode, result);
         }
@@ -15,9 +15,9 @@ public class CommonApiResponse
         public bool IsSuccessful => StatusCode >= 200 && StatusCode <= 299;
 
         [DataMember(EmitDefaultValue = false)]
-        public object Result { get; set; }
+        public object? Result { get; set; }
 
-        protected CommonApiResponse(HttpStatusCode statusCode, object result = null)
+        protected CommonApiResponse(HttpStatusCode statusCode, object? result = null)
         {
             RequestId = Guid.NewGuid().ToString();
             StatusCode = (int)statusCode;

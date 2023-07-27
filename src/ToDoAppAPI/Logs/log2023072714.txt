@@ -1,0 +1,856 @@
+2023-07-27 14:44:02.063 +03:00 [INF] User profile is available. Using 'C:\Users\Akram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-27 14:44:02.390 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 14:44:02.392 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 14:44:02.403 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 14:44:02.404 +03:00 [INF] Hosting environment: Production
+2023-07-27 14:44:02.406 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 14:44:45.498 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 146
+2023-07-27 14:44:47.121 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2023-07-27 14:44:47.131 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SuperAdmin|Admin)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SuperAdmin)
+2023-07-27 14:44:47.142 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-27 14:44:47.272 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 146 - 401 - - 1776.4403ms
+2023-07-27 14:45:05.307 +03:00 [INF] Application is shutting down...
+2023-07-27 14:45:13.127 +03:00 [INF] User profile is available. Using 'C:\Users\Akram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-27 14:45:13.634 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 14:45:13.637 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 14:45:13.644 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 14:45:13.646 +03:00 [INF] Hosting environment: Production
+2023-07-27 14:45:13.648 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 14:45:18.533 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 156
+2023-07-27 14:45:18.630 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2023-07-27 14:45:18.645 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SuperAdmin|Admin)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SuperAdmin)
+2023-07-27 14:45:18.653 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-27 14:45:18.776 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 156 - 401 - - 245.7778ms
+2023-07-27 14:45:35.089 +03:00 [INF] Application is shutting down...
+2023-07-27 14:45:43.996 +03:00 [INF] User profile is available. Using 'C:\Users\Akram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-27 14:45:44.285 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 14:45:44.286 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 14:45:44.297 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 14:45:44.301 +03:00 [INF] Hosting environment: Production
+2023-07-27 14:45:44.302 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 14:46:07.790 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Auth/BearerToken application/json 57
+2023-07-27 14:46:07.893 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2023-07-27 14:46:07.898 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI)'
+2023-07-27 14:46:07.959 +03:00 [INF] Route matched with {action = "Authonticate", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationResponseDto]] Authonticate(ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationRequestDto) on controller ToDoAppAPI.Controllers.AuthController (ToDoAppAPI).
+2023-07-27 14:46:12.385 +03:00 [INF] Executed DbCommand (379ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:46:12.748 +03:00 [INF] Executed DbCommand (93ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-27 14:46:12.834 +03:00 [INF] Executed DbCommand (34ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 14:46:12.848 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-07-27 14:46:12.882 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-27 14:46:13.001 +03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationResponseDto'.
+2023-07-27 14:46:13.043 +03:00 [INF] Executed action ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI) in 5072.7269ms
+2023-07-27 14:46:13.050 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI)'
+2023-07-27 14:46:13.231 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Auth/BearerToken application/json 57 - 200 - application/json;+charset=utf-8 5444.2581ms
+2023-07-27 14:46:30.841 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Auth/BearerToken application/json 57
+2023-07-27 14:46:30.847 +03:00 [INF] Bearer was not authenticated. Failure message: No SecurityTokenValidator available for token.
+2023-07-27 14:46:30.849 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI)'
+2023-07-27 14:46:30.850 +03:00 [INF] Route matched with {action = "Authonticate", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationResponseDto]] Authonticate(ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationRequestDto) on controller ToDoAppAPI.Controllers.AuthController (ToDoAppAPI).
+2023-07-27 14:46:30.926 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:46:30.940 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-27 14:46:30.948 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 14:46:30.964 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-07-27 14:46:30.970 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-27 14:46:30.973 +03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationResponseDto'.
+2023-07-27 14:46:30.974 +03:00 [INF] Executed action ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI) in 119.3545ms
+2023-07-27 14:46:30.976 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI)'
+2023-07-27 14:46:30.980 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Auth/BearerToken application/json 57 - 200 - application/json;+charset=utf-8 139.0380ms
+2023-07-27 14:46:51.994 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7244/api/Users/admins - -
+2023-07-27 14:46:52.092 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI)'
+2023-07-27 14:46:52.095 +03:00 [INF] Route matched with {action = "getAllAdmins", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]]] getAllAdmins() on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:46:52.233 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:46:52.256 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetUsers] AS [a0] ON [a].[UserId] = [a0].[Id]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-27 14:46:52.285 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoAppAPI.Dtos.Users.GetUserOutputDto, ToDoAppAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-27 14:46:52.299 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI) in 201.3478ms
+2023-07-27 14:46:52.302 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI)'
+2023-07-27 14:46:52.309 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7244/api/Users/admins - - - 200 - application/json;+charset=utf-8 314.7444ms
+2023-07-27 14:46:59.195 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 146
+2023-07-27 14:46:59.198 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:46:59.213 +03:00 [INF] Route matched with {action = "CreateAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]] CreateAdminUser(ToDoAppAPI.Dtos.Users.CreateUserInputDto) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:46:59.256 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:46:59.285 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:46:59.448 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2023-07-27 14:46:59.471 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:46:59.498 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2023-07-27 14:46:59.506 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:46:59.529 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:46:59.535 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:46:59.587 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2023-07-27 14:46:59.613 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ToDoAppAPI.Dtos.Users.GetUserOutputDto'.
+2023-07-27 14:46:59.636 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI) in 420.8603ms
+2023-07-27 14:46:59.638 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:46:59.640 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 146 - 201 - application/json;+charset=utf-8 445.3858ms
+2023-07-27 14:47:06.132 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 157
+2023-07-27 14:47:06.140 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:47:06.142 +03:00 [INF] Route matched with {action = "CreateAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]] CreateAdminUser(ToDoAppAPI.Dtos.Users.CreateUserInputDto) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:47:06.163 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:47:06.175 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:47:06.187 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2023-07-27 14:47:06.193 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:47:06.207 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2023-07-27 14:47:06.215 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:47:06.219 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:47:06.223 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:47:06.246 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2023-07-27 14:47:06.252 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ToDoAppAPI.Dtos.Users.GetUserOutputDto'.
+2023-07-27 14:47:06.255 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI) in 110.3178ms
+2023-07-27 14:47:06.256 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:47:06.258 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 157 - 201 - application/json;+charset=utf-8 125.6345ms
+2023-07-27 14:47:25.366 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/admin.Gladyce_Schulist26 application/json 159
+2023-07-27 14:47:25.367 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:47:25.373 +03:00 [INF] Route matched with {action = "DeleteAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteAdminUser(System.String) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:47:25.382 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:47:25.405 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 14:47:25.410 +03:00 [INF] Executing ForbidResult with authentication schemes ([]).
+2023-07-27 14:47:25.414 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2023-07-27 14:47:25.416 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI) in 40.6756ms
+2023-07-27 14:47:25.422 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:47:25.424 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/admin.Gladyce_Schulist26 application/json 159 - 403 - - 58.4666ms
+2023-07-27 14:47:38.458 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users application/json 150
+2023-07-27 14:47:38.462 +03:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2023-07-27 14:47:38.469 +03:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2023-07-27 14:47:38.472 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users application/json 150 - 405 - - 13.6049ms
+2023-07-27 14:47:45.646 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7244/api/Users/admins - -
+2023-07-27 14:47:45.648 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI)'
+2023-07-27 14:47:45.651 +03:00 [INF] Route matched with {action = "getAllAdmins", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]]] getAllAdmins() on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:47:45.659 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:47:45.667 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetUsers] AS [a0] ON [a].[UserId] = [a0].[Id]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-27 14:47:45.675 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoAppAPI.Dtos.Users.GetUserOutputDto, ToDoAppAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-27 14:47:45.677 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI) in 21.6687ms
+2023-07-27 14:47:45.681 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI)'
+2023-07-27 14:47:45.683 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7244/api/Users/admins - - - 200 - application/json;+charset=utf-8 37.4643ms
+2023-07-27 14:47:48.567 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 174
+2023-07-27 14:47:48.577 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:47:48.580 +03:00 [INF] Route matched with {action = "CreateAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]] CreateAdminUser(ToDoAppAPI.Dtos.Users.CreateUserInputDto) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:47:48.600 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:47:48.612 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:47:48.626 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2023-07-27 14:47:48.632 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:47:48.642 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2023-07-27 14:47:48.651 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:47:48.655 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:47:48.659 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:47:48.672 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2023-07-27 14:47:48.679 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ToDoAppAPI.Dtos.Users.GetUserOutputDto'.
+2023-07-27 14:47:48.681 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI) in 97.1032ms
+2023-07-27 14:47:48.682 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:47:48.684 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 174 - 201 - application/json;+charset=utf-8 116.7106ms
+2023-07-27 14:48:07.376 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/admin.Khalid.Greenfelder30 application/json 158
+2023-07-27 14:48:07.379 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:48:07.382 +03:00 [INF] Route matched with {action = "DeleteAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteAdminUser(System.String) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:48:07.400 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:48:07.407 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 14:48:07.410 +03:00 [INF] Executing ForbidResult with authentication schemes ([]).
+2023-07-27 14:48:07.411 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2023-07-27 14:48:07.412 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI) in 17.4656ms
+2023-07-27 14:48:07.414 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:48:07.422 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/admin.Khalid.Greenfelder30 application/json 158 - 403 - - 46.4416ms
+2023-07-27 14:48:20.933 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7244/api/Values/SuperAdmin - -
+2023-07-27 14:48:20.935 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.ValuesController.SuperAdmin (ToDoAppAPI)'
+2023-07-27 14:48:20.941 +03:00 [INF] Route matched with {action = "SuperAdmin", controller = "Values"}. Executing controller action with signature System.Collections.Generic.List`1[System.String] SuperAdmin() on controller ToDoAppAPI.Controllers.ValuesController (ToDoAppAPI).
+2023-07-27 14:48:20.945 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-07-27 14:48:20.949 +03:00 [INF] Executed action ToDoAppAPI.Controllers.ValuesController.SuperAdmin (ToDoAppAPI) in 5.7343ms
+2023-07-27 14:48:20.966 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.ValuesController.SuperAdmin (ToDoAppAPI)'
+2023-07-27 14:48:20.969 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7244/api/Values/SuperAdmin - - - 200 - application/json;+charset=utf-8 36.2330ms
+2023-07-27 14:48:32.286 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/null application/json 161
+2023-07-27 14:48:32.288 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:48:32.301 +03:00 [INF] Route matched with {action = "DeleteAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteAdminUser(System.String) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:48:32.309 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:48:32.312 +03:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-07-27 14:48:32.319 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI) in 14.5276ms
+2023-07-27 14:48:32.320 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:48:32.328 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/null application/json 161 - 404 - application/json;+charset=utf-8 41.4167ms
+2023-07-27 14:48:52.489 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 152
+2023-07-27 14:48:52.491 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:48:52.498 +03:00 [INF] Route matched with {action = "CreateAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]] CreateAdminUser(ToDoAppAPI.Dtos.Users.CreateUserInputDto) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:48:52.518 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:48:52.527 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:48:52.533 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2023-07-27 14:48:52.544 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:48:52.556 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2023-07-27 14:48:52.561 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:48:52.565 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:48:52.607 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:48:52.685 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2023-07-27 14:48:52.724 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ToDoAppAPI.Dtos.Users.GetUserOutputDto'.
+2023-07-27 14:48:52.726 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI) in 224.8788ms
+2023-07-27 14:48:52.728 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:48:52.729 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 152 - 201 - application/json;+charset=utf-8 240.3910ms
+2023-07-27 14:48:55.591 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/admin.Elza14 application/json 155
+2023-07-27 14:48:55.592 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:48:55.595 +03:00 [INF] Route matched with {action = "DeleteAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteAdminUser(System.String) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:48:55.601 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:48:55.620 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 14:48:55.623 +03:00 [INF] Executing ForbidResult with authentication schemes ([]).
+2023-07-27 14:48:55.625 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2023-07-27 14:48:55.626 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI) in 28.1664ms
+2023-07-27 14:48:55.627 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:48:55.629 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/admin.Elza14 application/json 155 - 403 - - 38.1282ms
+2023-07-27 14:52:06.040 +03:00 [INF] Application is shutting down...
+2023-07-27 14:52:12.738 +03:00 [INF] User profile is available. Using 'C:\Users\Akram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-27 14:52:12.939 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 14:52:12.940 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 14:52:12.945 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 14:52:12.948 +03:00 [INF] Hosting environment: Production
+2023-07-27 14:52:12.949 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 14:52:26.067 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/null application/json 148
+2023-07-27 14:52:26.344 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:52:26.392 +03:00 [INF] Route matched with {action = "DeleteAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteAdminUser(System.String) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:52:28.410 +03:00 [INF] Executed DbCommand (56ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:52:28.475 +03:00 [INF] Executing NotFoundObjectResult, writing value of type '<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2023-07-27 14:52:28.585 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI) in 2184.0785ms
+2023-07-27 14:52:28.588 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:52:28.754 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/null application/json 148 - 404 - application/json;+charset=utf-8 2690.9921ms
+2023-07-27 14:52:31.405 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 158
+2023-07-27 14:52:31.471 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '7/27/2023 11:47:30 AM', Current time: '7/27/2023 11:52:31 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-07-27 14:52:31.600 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '7/27/2023 11:47:30 AM', Current time: '7/27/2023 11:52:31 AM'.
+2023-07-27 14:52:31.605 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SuperAdmin|Admin)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SuperAdmin)
+2023-07-27 14:52:31.621 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-27 14:52:31.623 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 158 - 401 - - 218.7031ms
+2023-07-27 14:52:37.114 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/null application/json 154
+2023-07-27 14:52:37.119 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '7/27/2023 11:47:30 AM', Current time: '7/27/2023 11:52:37 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-07-27 14:52:37.132 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '7/27/2023 11:47:30 AM', Current time: '7/27/2023 11:52:37 AM'.
+2023-07-27 14:52:37.145 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SuperAdmin|Admin)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SuperAdmin)
+2023-07-27 14:52:37.151 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-27 14:52:37.153 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/null application/json 154 - 401 - - 38.3982ms
+2023-07-27 14:53:03.615 +03:00 [INF] Application is shutting down...
+2023-07-27 14:53:20.754 +03:00 [INF] User profile is available. Using 'C:\Users\Akram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-27 14:53:21.054 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 14:53:21.054 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 14:53:21.059 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 14:53:21.059 +03:00 [INF] Hosting environment: Development
+2023-07-27 14:53:21.060 +03:00 [INF] Content root path: E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 14:53:21.657 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7244/ - -
+2023-07-27 14:53:22.128 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7244/ - - - 404 - - 476.1007ms
+2023-07-27 14:53:22.317 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7244/favicon.ico - -
+2023-07-27 14:53:22.330 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7244/favicon.ico - - - 404 - - 12.8289ms
+2023-07-27 14:53:26.530 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 143
+2023-07-27 14:53:26.766 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '7/27/2023 11:47:30 AM', Current time: '7/27/2023 11:53:26 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-07-27 14:53:26.818 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '7/27/2023 11:47:30 AM', Current time: '7/27/2023 11:53:26 AM'.
+2023-07-27 14:53:26.832 +03:00 [INF] Authorization failed. These requirements were not met:
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SuperAdmin|Admin)
+RolesAuthorizationRequirement:User.IsInRole must be true for one of the following roles: (SuperAdmin)
+2023-07-27 14:53:26.848 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2023-07-27 14:53:26.861 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 143 - 401 - - 330.5328ms
+2023-07-27 14:53:36.520 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Auth/BearerToken application/json 57
+2023-07-27 14:53:36.521 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '7/27/2023 11:47:30 AM', Current time: '7/27/2023 11:53:36 AM'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters, BaseConfiguration configuration)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateJWS(String token, TokenValidationParameters validationParameters, BaseConfiguration currentConfiguration, SecurityToken& signatureValidatedToken, ExceptionDispatchInfo& exceptionThrown)
+--- End of stack trace from previous location ---
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, JwtSecurityToken outerToken, TokenValidationParameters validationParameters, SecurityToken& signatureValidatedToken)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken)
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2023-07-27 14:53:36.522 +03:00 [INF] Bearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '7/27/2023 11:47:30 AM', Current time: '7/27/2023 11:53:36 AM'.
+2023-07-27 14:53:36.527 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI)'
+2023-07-27 14:53:36.581 +03:00 [INF] Route matched with {action = "Authonticate", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationResponseDto]] Authonticate(ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationRequestDto) on controller ToDoAppAPI.Controllers.AuthController (ToDoAppAPI).
+2023-07-27 14:53:39.938 +03:00 [INF] Executed DbCommand (131ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:53:40.249 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-27 14:53:40.304 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 14:53:40.323 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-07-27 14:53:40.351 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-27 14:53:40.425 +03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationResponseDto'.
+2023-07-27 14:53:40.496 +03:00 [INF] Executed action ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI) in 3907.7724ms
+2023-07-27 14:53:40.498 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI)'
+2023-07-27 14:53:40.637 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Auth/BearerToken application/json 57 - 200 - application/json;+charset=utf-8 4117.6435ms
+2023-07-27 14:53:43.158 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 151
+2023-07-27 14:53:43.183 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:53:43.186 +03:00 [INF] Route matched with {action = "CreateAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]] CreateAdminUser(ToDoAppAPI.Dtos.Users.CreateUserInputDto) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:53:43.497 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:53:43.528 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:53:43.743 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2023-07-27 14:53:43.785 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:53:43.810 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2023-07-27 14:53:43.819 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:53:43.840 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:53:43.845 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:53:43.925 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2023-07-27 14:53:43.964 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ToDoAppAPI.Dtos.Users.GetUserOutputDto'.
+2023-07-27 14:53:43.996 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI) in 809.4636ms
+2023-07-27 14:53:43.996 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:53:43.998 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 151 - 201 - application/json;+charset=utf-8 840.5291ms
+2023-07-27 14:54:02.309 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/admin.Ethyl_Hand application/json 165
+2023-07-27 14:54:02.311 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:54:02.316 +03:00 [INF] Route matched with {action = "DeleteAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteAdminUser(System.String) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:54:02.342 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:54:18.045 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:54:18.087 +03:00 [INF] Executed DbCommand (39ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2023-07-27 14:54:27.577 +03:00 [INF] Executing ForbidResult with authentication schemes ([]).
+2023-07-27 14:54:27.581 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2023-07-27 14:54:27.581 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI) in 25265.2926ms
+2023-07-27 14:54:27.581 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:54:27.582 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/admin.Ethyl_Hand application/json 165 - 403 - - 25273.1973ms
+2023-07-27 14:54:50.115 +03:00 [INF] User profile is available. Using 'C:\Users\Akram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-27 14:54:50.311 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 14:54:50.312 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 14:54:50.321 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 14:54:50.323 +03:00 [INF] Hosting environment: Production
+2023-07-27 14:54:50.324 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 14:54:50.830 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7244/api/Users/admins - -
+2023-07-27 14:54:51.128 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI)'
+2023-07-27 14:54:51.172 +03:00 [INF] Route matched with {action = "getAllAdmins", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]]] getAllAdmins() on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:54:53.119 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:54:53.272 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetUsers] AS [a0] ON [a].[UserId] = [a0].[Id]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-27 14:54:53.370 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoAppAPI.Dtos.Users.GetUserOutputDto, ToDoAppAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-27 14:54:53.469 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI) in 2286.434ms
+2023-07-27 14:54:53.472 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI)'
+2023-07-27 14:54:53.611 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7244/api/Users/admins - - - 200 - application/json;+charset=utf-8 2788.5308ms
+2023-07-27 14:55:01.389 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 155
+2023-07-27 14:55:01.400 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:55:01.431 +03:00 [INF] Route matched with {action = "CreateAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]] CreateAdminUser(ToDoAppAPI.Dtos.Users.CreateUserInputDto) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:55:01.628 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:55:01.655 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:55:01.916 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2023-07-27 14:55:01.965 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:55:02.002 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2023-07-27 14:55:02.024 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:55:02.058 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:55:02.067 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:55:02.285 +03:00 [INF] Executed DbCommand (151ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2023-07-27 14:55:02.334 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ToDoAppAPI.Dtos.Users.GetUserOutputDto'.
+2023-07-27 14:55:02.368 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI) in 929.5227ms
+2023-07-27 14:55:02.370 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:55:02.376 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 155 - 201 - application/json;+charset=utf-8 987.9888ms
+2023-07-27 14:55:04.726 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7244/api/Users/admins - -
+2023-07-27 14:55:04.739 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI)'
+2023-07-27 14:55:04.741 +03:00 [INF] Route matched with {action = "getAllAdmins", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]]] getAllAdmins() on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:55:04.777 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:55:04.785 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetUsers] AS [a0] ON [a].[UserId] = [a0].[Id]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-27 14:55:04.798 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoAppAPI.Dtos.Users.GetUserOutputDto, ToDoAppAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-27 14:55:04.802 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI) in 58.2698ms
+2023-07-27 14:55:04.807 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI)'
+2023-07-27 14:55:04.809 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7244/api/Users/admins - - - 200 - application/json;+charset=utf-8 82.8482ms
+2023-07-27 14:55:59.000 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Auth/BearerToken application/json 57
+2023-07-27 14:55:59.003 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI)'
+2023-07-27 14:55:59.010 +03:00 [INF] Route matched with {action = "Authonticate", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationResponseDto]] Authonticate(ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationRequestDto) on controller ToDoAppAPI.Controllers.AuthController (ToDoAppAPI).
+2023-07-27 14:55:59.034 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:55:59.086 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-27 14:55:59.102 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 14:55:59.120 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-07-27 14:55:59.131 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-27 14:55:59.156 +03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationResponseDto'.
+2023-07-27 14:55:59.163 +03:00 [INF] Executed action ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI) in 144.7428ms
+2023-07-27 14:55:59.166 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI)'
+2023-07-27 14:55:59.181 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Auth/BearerToken application/json 57 - 200 - application/json;+charset=utf-8 180.8494ms
+2023-07-27 14:56:03.101 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 149
+2023-07-27 14:56:03.104 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:56:03.111 +03:00 [INF] Route matched with {action = "CreateAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]] CreateAdminUser(ToDoAppAPI.Dtos.Users.CreateUserInputDto) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:56:03.125 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:56:03.131 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:56:03.164 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2023-07-27 14:56:03.178 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:56:03.183 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2023-07-27 14:56:03.191 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:56:03.195 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:56:03.207 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:56:03.217 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2023-07-27 14:56:03.222 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ToDoAppAPI.Dtos.Users.GetUserOutputDto'.
+2023-07-27 14:56:03.224 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI) in 107.8867ms
+2023-07-27 14:56:03.225 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:56:03.226 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 149 - 201 - application/json;+charset=utf-8 125.5474ms
+2023-07-27 14:56:11.728 +03:00 [INF] Request starting HTTP/1.1 GET https://localhost:7244/api/Users/admins - -
+2023-07-27 14:56:11.731 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI)'
+2023-07-27 14:56:11.733 +03:00 [INF] Route matched with {action = "getAllAdmins", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]]] getAllAdmins() on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:56:11.743 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:56:11.749 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Id], [a0].[AccessFailedCount], [a0].[ConcurrencyStamp], [a0].[Email], [a0].[EmailConfirmed], [a0].[FirstName], [a0].[LastName], [a0].[LockoutEnabled], [a0].[LockoutEnd], [a0].[NormalizedEmail], [a0].[NormalizedUserName], [a0].[PasswordHash], [a0].[PhoneNumber], [a0].[PhoneNumberConfirmed], [a0].[SecurityStamp], [a0].[TwoFactorEnabled], [a0].[UserName]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetUsers] AS [a0] ON [a].[UserId] = [a0].[Id]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-27 14:56:11.752 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[ToDoAppAPI.Dtos.Users.GetUserOutputDto, ToDoAppAPI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-07-27 14:56:11.754 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI) in 14.8126ms
+2023-07-27 14:56:11.756 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.getAllAdmins (ToDoAppAPI)'
+2023-07-27 14:56:11.757 +03:00 [INF] Request finished HTTP/1.1 GET https://localhost:7244/api/Users/admins - - - 200 - application/json;+charset=utf-8 28.5657ms
+2023-07-27 14:56:58.136 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/admin.Helen41 application/json 162
+2023-07-27 14:56:58.139 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:56:58.147 +03:00 [INF] Route matched with {action = "DeleteAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteAdminUser(System.String) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:56:58.155 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:56:58.163 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:56:58.177 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2023-07-27 14:56:58.184 +03:00 [INF] Executing ForbidResult with authentication schemes ([]).
+2023-07-27 14:56:58.188 +03:00 [INF] AuthenticationScheme: Bearer was forbidden.
+2023-07-27 14:56:58.189 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI) in 39.2091ms
+2023-07-27 14:56:58.190 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:56:58.192 +03:00 [INF] Request finished HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/admin.Helen41 application/json 162 - 403 - - 56.2889ms
+2023-07-27 14:58:44.264 +03:00 [INF] Application is shutting down...
+2023-07-27 14:58:54.813 +03:00 [INF] User profile is available. Using 'C:\Users\Akram\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-07-27 14:58:55.107 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 14:58:55.107 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 14:58:55.122 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 14:58:55.123 +03:00 [INF] Hosting environment: Development
+2023-07-27 14:58:55.123 +03:00 [INF] Content root path: E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 14:58:55.581 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7244/ - -
+2023-07-27 14:58:56.201 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7244/ - - - 404 - - 631.5819ms
+2023-07-27 14:59:08.993 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Auth/BearerToken application/json 57
+2023-07-27 14:59:09.256 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI)'
+2023-07-27 14:59:09.305 +03:00 [INF] Route matched with {action = "Authonticate", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationResponseDto]] Authonticate(ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationRequestDto) on controller ToDoAppAPI.Controllers.AuthController (ToDoAppAPI).
+2023-07-27 14:59:12.601 +03:00 [INF] Executed DbCommand (125ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:59:12.899 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-27 14:59:12.948 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 14:59:12.967 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-07-27 14:59:13.003 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-27 14:59:13.043 +03:00 [INF] Executing OkObjectResult, writing value of type 'ToDoAppAPI.Dtos.Users.Authenticate.AuthenticationResponseDto'.
+2023-07-27 14:59:13.111 +03:00 [INF] Executed action ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI) in 3797.8638ms
+2023-07-27 14:59:13.112 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.AuthController.Authonticate (ToDoAppAPI)'
+2023-07-27 14:59:13.233 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Auth/BearerToken application/json 57 - 200 - application/json;+charset=utf-8 4239.8321ms
+2023-07-27 14:59:18.693 +03:00 [INF] Request starting HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 164
+2023-07-27 14:59:18.711 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:59:18.714 +03:00 [INF] Route matched with {action = "CreateAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ToDoAppAPI.Dtos.Users.GetUserOutputDto]] CreateAdminUser(ToDoAppAPI.Dtos.Users.CreateUserInputDto) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:59:19.028 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:59:19.060 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:59:19.276 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 256), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (Size = 256), @p10='?' (Size = 256), @p11='?' (Size = 4000), @p12='?' (Size = 4000), @p13='?' (DbType = Boolean), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AspNetUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [Email], [EmailConfirmed], [FirstName], [LastName], [LockoutEnabled], [LockoutEnd], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16);
+2023-07-27 14:59:19.314 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:59:19.339 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__p_0='?' (Size = 450), @__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @__p_0 AND [a].[RoleId] = @__p_1
+2023-07-27 14:59:19.346 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedRoleName_0
+2023-07-27 14:59:19.376 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 14:59:19.382 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__normalizedEmail_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @__normalizedEmail_0
+2023-07-27 14:59:19.483 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450), @p18='?' (Size = 450), @p2='?' (DbType = Int32), @p3='?' (Size = 4000), @p19='?' (Size = 4000), @p4='?' (Size = 256), @p5='?' (DbType = Boolean), @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?' (DbType = Boolean), @p9='?' (DbType = DateTimeOffset), @p10='?' (Size = 256), @p11='?' (Size = 256), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (DbType = Boolean), @p15='?' (Size = 4000), @p16='?' (DbType = Boolean), @p17='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [AspNetUserRoles] ([RoleId], [UserId])
+VALUES (@p0, @p1);
+UPDATE [AspNetUsers] SET [AccessFailedCount] = @p2, [ConcurrencyStamp] = @p3, [Email] = @p4, [EmailConfirmed] = @p5, [FirstName] = @p6, [LastName] = @p7, [LockoutEnabled] = @p8, [LockoutEnd] = @p9, [NormalizedEmail] = @p10, [NormalizedUserName] = @p11, [PasswordHash] = @p12, [PhoneNumber] = @p13, [PhoneNumberConfirmed] = @p14, [SecurityStamp] = @p15, [TwoFactorEnabled] = @p16, [UserName] = @p17
+OUTPUT 1
+WHERE [Id] = @p18 AND [ConcurrencyStamp] = @p19;
+2023-07-27 14:59:19.527 +03:00 [INF] Executing CreatedAtActionResult, writing value of type 'ToDoAppAPI.Dtos.Users.GetUserOutputDto'.
+2023-07-27 14:59:19.559 +03:00 [INF] Executed action ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI) in 845.1792ms
+2023-07-27 14:59:19.560 +03:00 [INF] Executed endpoint 'ToDoAppAPI.Controllers.UsersController.CreateAdminUser (ToDoAppAPI)'
+2023-07-27 14:59:19.561 +03:00 [INF] Request finished HTTP/1.1 POST https://localhost:7244/api/Users/admins application/json 164 - 201 - application/json;+charset=utf-8 867.9168ms
+2023-07-27 14:59:26.516 +03:00 [INF] Request starting HTTP/1.1 DELETE https://localhost:7244/api/Users/admins/admin.Francesco_Emard50 application/json 154
+2023-07-27 14:59:26.518 +03:00 [INF] Executing endpoint 'ToDoAppAPI.Controllers.UsersController.DeleteAdminUser (ToDoAppAPI)'
+2023-07-27 14:59:26.522 +03:00 [INF] Route matched with {action = "DeleteAdminUser", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] DeleteAdminUser(System.String) on controller ToDoAppAPI.Controllers.UsersController (ToDoAppAPI).
+2023-07-27 14:59:26.557 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0

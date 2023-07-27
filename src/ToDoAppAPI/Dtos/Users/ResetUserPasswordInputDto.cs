@@ -6,7 +6,7 @@ namespace ToDoAppAPI.Dtos.Users
     {
 
         [MinLength(6)]
-        [MaxLength(60)]
+        [MaxLength(30)]
         [DataType(DataType.Password)]
         [Required]
         public string NewPassword { get; set; } = string.Empty;

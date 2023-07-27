@@ -1,5 +1,6 @@
 using System.Net;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Schema;
 
 namespace ToDoAppAPI.Utitlities.Responses;
 
@@ -42,21 +43,17 @@ public class ResponseWrapperMiddlwware
                 // ... and write it to the response body
                 memoryStream.Seek(0, SeekOrigin.Begin);
                 
-
-
                 //read the content of the memory stream
                 var readToEnd = new StreamReader(memoryStream).ReadToEnd();
-                //convert the content to json
-                var objResult = JsonConvert.DeserializeObject(readToEnd);
 
-
-                //...
-                if (context.Response.StatusCode < 200 || context.Response.StatusCode > 299)
+                object? objResult = readToEnd;
+                if ((readToEnd.StartsWith("{") && readToEnd.EndsWith("}")) || //For object
+                        (readToEnd.StartsWith("[") && readToEnd.EndsWith("]"))) //For array
                 {
-
+                    //convert the content to json
+                    objResult = JsonConvert.DeserializeObject(readToEnd);
                 }
-
-
+               
                 //convert the json to common api response
                 var result = CommonApiResponse.Create((HttpStatusCode)context.Response.StatusCode, objResult!);
                 //write the content of the common api response to the response body
