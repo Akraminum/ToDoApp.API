@@ -1,0 +1,494 @@
+2023-07-31 15:02:28.966 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:02:29.004 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:02:29.017 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:02:29.020 +03:00 [INF] Hosting environment: Production
+2023-07-31 15:02:29.021 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:02:33.071 +03:00 [ERR] Not Logged In (ecf245a1-7006-4d09-92ce-2a7473a8024b)
+System.UnauthorizedAccessException: Not Logged In
+   at ToDoAppAPI.Services.UserProvider.GetUserId() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\UserProvider.cs:line 27
+   at ToDoAppAPI.Services.UserProvider..ctor(IHttpContextAccessor httpContextAccessor) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\UserProvider.cs:line 14
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method9(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-31 15:02:41.288 +03:00 [INF] Application is shutting down...
+2023-07-31 15:02:46.183 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:02:46.235 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:02:46.241 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:02:46.243 +03:00 [INF] Hosting environment: Production
+2023-07-31 15:02:46.244 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:02:49.176 +03:00 [ERR] Not Logged In (f9d88eaf-128a-4532-8d60-716b4c6dc3a3)
+System.UnauthorizedAccessException: Not Logged In
+   at ToDoAppAPI.Services.UserProvider.GetUserId() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\UserProvider.cs:line 27
+   at ToDoAppAPI.Services.UserProvider..ctor(IHttpContextAccessor httpContextAccessor) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\UserProvider.cs:line 14
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Span`1& arguments, Signature sig, Boolean constructor, Boolean wrapExceptions)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method9(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-31 15:04:43.921 +03:00 [INF] Application is shutting down...
+2023-07-31 15:04:49.080 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:04:49.126 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:04:49.134 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:04:49.137 +03:00 [INF] Hosting environment: Production
+2023-07-31 15:04:49.140 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:04:52.796 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:04:52.801 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:04:53.777 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 15:04:53.982 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 15:04:54.026 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 15:04:59.937 +03:00 [INF] Application is shutting down...
+2023-07-31 15:05:03.313 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:05:03.364 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:05:03.370 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:05:03.371 +03:00 [INF] Hosting environment: Production
+2023-07-31 15:05:03.374 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:05:08.361 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:05:08.367 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:05:09.359 +03:00 [INF] Executed DbCommand (58ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 15:05:09.576 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Lists] SET [Name] = @p0, [OwnerId] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2023-07-31 15:07:47.513 +03:00 [INF] Application is shutting down...
+2023-07-31 15:09:01.477 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:09:01.501 +03:00 [INF] Application is shutting down...
+2023-07-31 15:09:01.522 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:09:01.523 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:09:01.523 +03:00 [INF] Hosting environment: Production
+2023-07-31 15:09:01.524 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:09:19.351 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:09:19.412 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:09:19.418 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:09:19.419 +03:00 [INF] Hosting environment: Development
+2023-07-31 15:09:19.419 +03:00 [INF] Content root path: E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:09:32.213 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:09:32.215 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:09:33.893 +03:00 [INF] Executed DbCommand (117ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 15:18:16.267 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:18:16.335 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:18:16.341 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:18:16.342 +03:00 [INF] Hosting environment: Development
+2023-07-31 15:18:16.343 +03:00 [INF] Content root path: E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:18:28.677 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:18:28.679 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:18:36.036 +03:00 [ERR] Not Logged In (1abd78d7-f86e-4e72-b620-c58bbe874488)
+System.UnauthorizedAccessException: Not Logged In
+   at ToDoAppAPI.Services.UserProvider.GetUserId() in E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\UserProvider.cs:line 24
+   at lambda_method100(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at ToDoAppAPI.Repositories.ListRepository.GetById(Int32 id) in E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Repositories\ListRepository.cs:line 56
+   at ToDoAppAPI.Services.ListsServices.ListService.Update(UpdateListInputDto entity) in E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 64
+   at ToDoAppAPI.Controllers.ListsController.Update(UpdateListInputDto input) in E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 68
+   at lambda_method12(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-31 15:19:20.964 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:19:21.058 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:19:21.069 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:19:21.072 +03:00 [INF] Hosting environment: Development
+2023-07-31 15:19:21.072 +03:00 [INF] Content root path: E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:19:37.966 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:19:37.969 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:19:39.926 +03:00 [INF] Executed DbCommand (379ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 15:19:46.343 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 15:19:46.409 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 15:20:05.477 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 15:22:50.341 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:22:50.432 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:22:50.441 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:22:50.443 +03:00 [INF] Hosting environment: Production
+2023-07-31 15:22:50.446 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:22:55.199 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:22:55.204 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:22:56.234 +03:00 [INF] Executed DbCommand (88ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 15:22:56.445 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Lists] SET [Name] = @p0, [OwnerId] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2023-07-31 15:33:24.465 +03:00 [INF] Application is shutting down...
+2023-07-31 15:33:37.558 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:33:37.598 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:33:37.602 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:33:37.606 +03:00 [INF] Hosting environment: Production
+2023-07-31 15:33:37.608 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:34:03.399 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:34:03.403 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:34:04.001 +03:00 [ERR] Not Logged In (911ee158-7ecc-4c3d-928c-c35f7c27b44f)
+System.UnauthorizedAccessException: Not Logged In
+   at ToDoAppAPI.Services.UserProvider.GetUserId() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\UserProvider.cs:line 24
+   at lambda_method93(Closure , QueryContext )
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at ToDoAppAPI.Repositories.ListRepository.GetById(Int32 id) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Repositories\ListRepository.cs:line 56
+   at ToDoAppAPI.Services.ListsServices.ListService.FindById(Int32 id) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 55
+   at ToDoAppAPI.Controllers.ListsController.GetById(Int32 id) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 58
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-31 15:34:09.015 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 15:34:09.172 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 15:34:09.216 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 15:34:12.841 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 15:48:31.375 +03:00 [INF] Application is shutting down...
+2023-07-31 15:48:43.946 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:48:44.039 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:48:44.054 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:48:44.057 +03:00 [INF] Hosting environment: Production
+2023-07-31 15:48:44.059 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:48:47.686 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:48:47.690 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:48:48.722 +03:00 [INF] Executed DbCommand (79ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 15:48:48.948 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 15:48:49.012 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 15:48:52.715 +03:00 [INF] Creating list
+2023-07-31 15:48:52.961 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 15:48:53.002 +03:00 [INF] List created
+2023-07-31 15:49:24.655 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 15:49:24.711 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Lists]
+OUTPUT 1
+WHERE [Id] = @p0;
+2023-07-31 15:49:24.726 +03:00 [ERR] Connection id "0HMSHOHTCOAOV", Request id "0HMSHOHTCOAOV:00000004": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.Advance(Int32 bytes)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.Advance(Int32 bytes)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at ToDoAppAPI.Utitlities.Responses.ResponseWrapperMiddlwware.Invoke(HttpContext context) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Utitlities\Responses\ResponseWrapperMiddlwware.cs:line 60
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-07-31 15:50:25.201 +03:00 [INF] Application is shutting down...
+2023-07-31 15:50:32.381 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:50:32.445 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:50:32.456 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:50:32.459 +03:00 [INF] Hosting environment: Production
+2023-07-31 15:50:32.461 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:50:37.682 +03:00 [INF] Creating list
+2023-07-31 15:50:38.436 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:50:38.438 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:50:39.247 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 15:50:39.319 +03:00 [INF] List created
+2023-07-31 15:50:46.013 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 15:50:46.063 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Lists]
+OUTPUT 1
+WHERE [Id] = @p0;
+2023-07-31 15:51:48.450 +03:00 [INF] Application is shutting down...
+2023-07-31 15:52:00.782 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:52:00.844 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:52:00.848 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:52:00.848 +03:00 [INF] Hosting environment: Development
+2023-07-31 15:52:00.849 +03:00 [INF] Content root path: E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:52:10.827 +03:00 [INF] Creating list
+2023-07-31 15:52:11.989 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:52:11.989 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:52:13.356 +03:00 [INF] Executed DbCommand (113ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 15:52:13.517 +03:00 [INF] List created
+2023-07-31 15:52:16.836 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 15:52:16.881 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Lists]
+OUTPUT 1
+WHERE [Id] = @p0;
+2023-07-31 15:54:14.476 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.Advance(Int32 bytes)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.Advance(Int32 bytes)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at ToDoAppAPI.Utitlities.Responses.ResponseWrapperMiddlwware.Invoke(HttpContext context) in E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Utitlities\Responses\ResponseWrapperMiddlwware.cs:line 60
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-07-31 15:54:14.509 +03:00 [WRN] The response has already started, the error page middleware will not be executed.
+2023-07-31 15:54:14.518 +03:00 [ERR] Connection id "0HMSHOJNEJU5F", Request id "0HMSHOJNEJU5F:00000003": An unhandled exception was thrown by the application.
+System.InvalidOperationException: Writing to the response body is invalid for responses with status code 204.
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.Advance(Int32 bytes)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponsePipeWriter.Advance(Int32 bytes)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.Write(HttpResponse response, String text, Encoding encoding)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, Encoding encoding, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Http.HttpResponseWritingExtensions.WriteAsync(HttpResponse response, String text, CancellationToken cancellationToken)
+   at ToDoAppAPI.Utitlities.Responses.ResponseWrapperMiddlwware.Invoke(HttpContext context) in E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Utitlities\Responses\ResponseWrapperMiddlwware.cs:line 60
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpProtocol.ProcessRequests[TContext](IHttpApplication`1 application)
+2023-07-31 15:55:04.732 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 15:55:04.837 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 15:55:04.848 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 15:55:04.850 +03:00 [INF] Hosting environment: Production
+2023-07-31 15:55:04.851 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 15:55:05.518 +03:00 [INF] Creating list
+2023-07-31 15:55:05.527 +03:00 [ERR] Not Logged In (5ff673f3-dba2-4d42-86cb-4cab796a74d8)
+System.UnauthorizedAccessException: Not Logged In
+   at ToDoAppAPI.Services.UserProvider.GetUserId() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\UserProvider.cs:line 24
+   at ToDoAppAPI.Services.ListsServices.ListService.Create(CreateListInputDto entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 37
+   at ToDoAppAPI.Controllers.ListsController.Create(CreateListInputDto input) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 57
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-31 15:55:12.935 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:55:12.939 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 15:55:13.934 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 15:55:14.132 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 15:55:14.175 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 15:55:16.368 +03:00 [INF] Creating list
+2023-07-31 15:55:16.626 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 15:55:16.695 +03:00 [INF] List created
+2023-07-31 15:55:19.158 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 15:55:19.199 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Lists]
+OUTPUT 1
+WHERE [Id] = @p0;

@@ -1,4 +1,4 @@
-﻿using ToDoAppAPI.Entities;
+﻿using ToDoAppAPI.Tasks.Dtos;
 
 namespace ToDoAppAPI.Dtos
 {

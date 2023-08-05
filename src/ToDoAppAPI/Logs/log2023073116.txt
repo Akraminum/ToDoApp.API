@@ -1,0 +1,845 @@
+2023-07-31 16:01:53.796 +03:00 [INF] Application is shutting down...
+2023-07-31 16:02:01.403 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:02:01.454 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:02:01.459 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:02:01.460 +03:00 [INF] Hosting environment: Production
+2023-07-31 16:02:01.461 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:02:12.941 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:02:12.944 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:02:13.911 +03:00 [INF] Executed DbCommand (54ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 16:02:14.103 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 16:02:14.146 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 16:02:18.788 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE [l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)
+2023-07-31 16:02:24.958 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE [l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)
+2023-07-31 16:04:51.576 +03:00 [INF] Application is shutting down...
+2023-07-31 16:05:00.128 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:05:00.199 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:05:00.204 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:05:00.205 +03:00 [INF] Hosting environment: Production
+2023-07-31 16:05:00.207 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:05:03.407 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:05:03.411 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:05:04.412 +03:00 [INF] Executed DbCommand (62ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND EXISTS (
+    SELECT 1
+    FROM [Tasks] AS [t]
+    WHERE [l].[Id] = [t].[ListId] AND [t].[ListId] = [l].[Id])
+2023-07-31 16:07:17.693 +03:00 [INF] Application is shutting down...
+2023-07-31 16:07:23.108 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:07:23.156 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:07:23.162 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:07:23.163 +03:00 [INF] Hosting environment: Production
+2023-07-31 16:07:23.164 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:07:28.076 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:07:28.081 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:07:29.205 +03:00 [INF] Executed DbCommand (49ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 16:07:29.402 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 16:07:29.469 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 16:07:37.366 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND EXISTS (
+    SELECT 1
+    FROM [Tasks] AS [t]
+    WHERE [l].[Id] = [t].[ListId] AND [t].[ListId] = [l].[Id])
+2023-07-31 16:07:51.517 +03:00 [INF] Creating list
+2023-07-31 16:07:51.849 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 16:07:51.901 +03:00 [INF] List created
+2023-07-31 16:07:53.037 +03:00 [INF] Creating list
+2023-07-31 16:07:53.045 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 16:07:53.052 +03:00 [INF] List created
+2023-07-31 16:07:54.437 +03:00 [INF] Creating list
+2023-07-31 16:07:54.443 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 16:07:54.450 +03:00 [INF] List created
+2023-07-31 16:07:55.625 +03:00 [INF] Creating list
+2023-07-31 16:07:55.629 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 16:07:55.634 +03:00 [INF] List created
+2023-07-31 16:07:58.882 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND EXISTS (
+    SELECT 1
+    FROM [Tasks] AS [t]
+    WHERE [l].[Id] = [t].[ListId] AND [t].[ListId] = [l].[Id])
+2023-07-31 16:08:07.617 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND EXISTS (
+    SELECT 1
+    FROM [Tasks] AS [t]
+    WHERE [l].[Id] = [t].[ListId] AND [t].[ListId] = [l].[Id])
+2023-07-31 16:08:22.876 +03:00 [INF] Application is shutting down...
+2023-07-31 16:08:29.435 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:08:29.530 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:08:29.539 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:08:29.543 +03:00 [INF] Hosting environment: Production
+2023-07-31 16:08:29.545 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:08:35.156 +03:00 [INF] Creating list
+2023-07-31 16:08:36.061 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:08:36.063 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:08:37.122 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 16:08:37.196 +03:00 [INF] List created
+2023-07-31 16:08:40.126 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE [l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)
+2023-07-31 16:09:06.056 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 16:09:06.180 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 16:09:06.225 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 16:09:09.966 +03:00 [INF] Application is shutting down...
+2023-07-31 16:09:17.086 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:09:17.137 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:09:17.142 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:09:17.144 +03:00 [INF] Hosting environment: Production
+2023-07-31 16:09:17.145 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:09:21.104 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:09:21.109 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:09:21.687 +03:00 [ERR] The LINQ expression 'x' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. (5bd0ba0b-7403-463c-afcc-8ae8c655d8bc)
+System.InvalidOperationException: The LINQ expression 'x' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.VisitParameter(ParameterExpression parameterExpression)
+   at System.Linq.Expressions.ParameterExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.VisitMember(MemberExpression memberExpression)
+   at System.Linq.Expressions.MemberExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Internal.SqlServerSqlTranslatingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at System.Linq.Expressions.BinaryExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.TranslateInternal(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateExpression(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateLambdaExpression(ShapedQueryExpression shapedQueryExpression, LambdaExpression lambdaExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateWhere(ShapedQueryExpression source, LambdaExpression predicate)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.TranslateSubquery(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.IncludeExpression.VisitChildren(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.VisitExtension(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Translate(SelectExpression selectExpression, Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateSelect(ShapedQueryExpression source, LambdaExpression selector)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ToDoAppAPI.Services.ListsServices.ListService.GetAll() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 50
+   at ToDoAppAPI.Controllers.ListsController.GetAll() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 35
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-31 16:09:27.690 +03:00 [ERR] The LINQ expression 'x' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. (e7b7ba28-e6b5-43ff-a80c-4fbf7636d3a7)
+System.InvalidOperationException: The LINQ expression 'x' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.VisitParameter(ParameterExpression parameterExpression)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.VisitMember(MemberExpression memberExpression)
+   at System.Linq.Expressions.MemberExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Internal.SqlServerSqlTranslatingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at System.Linq.Expressions.BinaryExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.TranslateInternal(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateExpression(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateLambdaExpression(ShapedQueryExpression shapedQueryExpression, LambdaExpression lambdaExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateWhere(ShapedQueryExpression source, LambdaExpression predicate)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.TranslateSubquery(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.IncludeExpression.VisitChildren(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.VisitExtension(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Translate(SelectExpression selectExpression, Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateSelect(ShapedQueryExpression source, LambdaExpression selector)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.IncludableQueryable`2.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at ToDoAppAPI.Services.ListsServices.ListService.GetAll() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 50
+   at ToDoAppAPI.Controllers.ListsController.GetAll() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 35
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-31 16:10:40.591 +03:00 [INF] Application is shutting down...
+2023-07-31 16:10:48.154 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:10:48.329 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:10:48.350 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:10:48.357 +03:00 [INF] Hosting environment: Production
+2023-07-31 16:10:48.361 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:10:52.391 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:10:52.396 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:10:53.449 +03:00 [INF] Executed DbCommand (57ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order]
+FROM [Lists] AS [l]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[DateCompleted], [t].[DateCreated], [t].[DateDue], [t].[Description], [t].[IsComplete], [t].[ListId], [t].[OwnerId], [t].[PriorityId], [t].[Title], [t].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order]
+    FROM [Tasks] AS [t]
+    LEFT JOIN [priorities] AS [p] ON [t].[PriorityId] = [p].[Id]
+) AS [t0] ON [l].[Id] = [t0].[ListId]
+WHERE [l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)
+ORDER BY [l].[Id], [t0].[Id]
+2023-07-31 16:13:29.970 +03:00 [INF] Application is shutting down...
+2023-07-31 16:13:36.963 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:13:37.123 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:13:37.134 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:13:37.144 +03:00 [INF] Hosting environment: Production
+2023-07-31 16:13:37.148 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:13:40.083 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:13:40.088 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:13:40.836 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-31 16:13:41.249 +03:00 [INF] Executed DbCommand (68ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t1].[Id], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[UserId], [t1].[ListId]
+FROM [Lists] AS [l]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[DateCompleted], [t].[DateCreated], [t].[DateDue], [t].[Description], [t].[IsComplete], [t].[ListId], [t].[OwnerId], [t].[PriorityId], [t].[Title], [t].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t]
+    LEFT JOIN [priorities] AS [p] ON [t].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t].[Id] = [s].[TaskId]
+) AS [t0] ON [l].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [u0].[UserId], [u0].[ListId]
+    FROM [UsersLists] AS [u0]
+    INNER JOIN [AspNetUsers] AS [a] ON [u0].[UserId] = [a].[Id]
+) AS [t1] ON [l].[Id] = [t1].[ListId]
+WHERE [l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)
+ORDER BY [l].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t1].[UserId], [t1].[ListId]
+2023-07-31 16:13:43.411 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t1].[Id], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[UserId], [t1].[ListId]
+FROM [Lists] AS [l]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[DateCompleted], [t].[DateCreated], [t].[DateDue], [t].[Description], [t].[IsComplete], [t].[ListId], [t].[OwnerId], [t].[PriorityId], [t].[Title], [t].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t]
+    LEFT JOIN [priorities] AS [p] ON [t].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t].[Id] = [s].[TaskId]
+) AS [t0] ON [l].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [u0].[UserId], [u0].[ListId]
+    FROM [UsersLists] AS [u0]
+    INNER JOIN [AspNetUsers] AS [a] ON [u0].[UserId] = [a].[Id]
+) AS [t1] ON [l].[Id] = [t1].[ListId]
+WHERE [l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)
+ORDER BY [l].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t1].[UserId], [t1].[ListId]
+2023-07-31 16:21:04.710 +03:00 [INF] Application is shutting down...
+2023-07-31 16:21:16.802 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:21:16.863 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:21:16.870 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:21:16.872 +03:00 [INF] Hosting environment: Production
+2023-07-31 16:21:16.875 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:21:21.770 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:21:21.775 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:21:22.822 +03:00 [INF] Executed DbCommand (61ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 16:21:23.015 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 16:21:23.054 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 16:21:24.464 +03:00 [INF] Creating list
+2023-07-31 16:21:24.702 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 16:21:24.746 +03:00 [INF] List created
+2023-07-31 16:21:28.782 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-31 16:21:28.816 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t2].[UserId], [t2].[ListId], [t2].[Id], [t2].[AccessFailedCount], [t2].[ConcurrencyStamp], [t2].[Email], [t2].[EmailConfirmed], [t2].[FirstName], [t2].[LastName], [t2].[LockoutEnabled], [t2].[LockoutEnd], [t2].[NormalizedEmail], [t2].[NormalizedUserName], [t2].[PasswordHash], [t2].[PhoneNumber], [t2].[PhoneNumberConfirmed], [t2].[SecurityStamp], [t2].[TwoFactorEnabled], [t2].[UserName]
+FROM (
+    SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+    FROM [Lists] AS [l]
+    WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+        SELECT 1
+        FROM [UsersLists] AS [u]
+        WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[DateCompleted], [t1].[DateCreated], [t1].[DateDue], [t1].[Description], [t1].[IsComplete], [t1].[ListId], [t1].[OwnerId], [t1].[PriorityId], [t1].[Title], [t1].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t1]
+    LEFT JOIN [priorities] AS [p] ON [t1].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t1].[Id] = [s].[TaskId]
+    WHERE [t1].[ListId] = @__id_0
+) AS [t0] ON [t].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [u0].[UserId], [u0].[ListId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [UsersLists] AS [u0]
+    INNER JOIN [AspNetUsers] AS [a] ON [u0].[UserId] = [a].[Id]
+) AS [t2] ON [t].[Id] = [t2].[ListId]
+ORDER BY [t].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t2].[UserId], [t2].[ListId]
+2023-07-31 16:30:11.855 +03:00 [INF] Application is shutting down...
+2023-07-31 16:30:20.219 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:30:20.284 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:30:20.290 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:30:20.293 +03:00 [INF] Hosting environment: Production
+2023-07-31 16:30:20.295 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:30:29.156 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:30:29.160 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:30:30.123 +03:00 [INF] Executed DbCommand (63ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 16:30:30.319 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 16:30:30.366 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 16:30:33.847 +03:00 [INF] Creating list
+2023-07-31 16:30:34.144 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 16:30:34.192 +03:00 [INF] List created
+2023-07-31 16:38:31.322 +03:00 [INF] Application is shutting down...
+2023-07-31 16:38:38.781 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:38:38.838 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:38:38.843 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:38:38.845 +03:00 [INF] Hosting environment: Production
+2023-07-31 16:38:38.846 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:38:51.484 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:38:51.489 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:38:52.459 +03:00 [INF] Executed DbCommand (48ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 16:38:52.660 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 16:38:52.700 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 16:38:56.898 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-31 16:38:56.933 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t1].[Id], [t1].[AccessFailedCount], [t1].[ConcurrencyStamp], [t1].[Email], [t1].[EmailConfirmed], [t1].[FirstName], [t1].[LastName], [t1].[LockoutEnabled], [t1].[LockoutEnd], [t1].[NormalizedEmail], [t1].[NormalizedUserName], [t1].[PasswordHash], [t1].[PhoneNumber], [t1].[PhoneNumberConfirmed], [t1].[SecurityStamp], [t1].[TwoFactorEnabled], [t1].[UserName], [t1].[UserId], [t1].[ListId]
+FROM [Lists] AS [l]
+LEFT JOIN (
+    SELECT [t].[Id], [t].[DateCompleted], [t].[DateCreated], [t].[DateDue], [t].[Description], [t].[IsComplete], [t].[ListId], [t].[OwnerId], [t].[PriorityId], [t].[Title], [t].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t]
+    LEFT JOIN [priorities] AS [p] ON [t].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t].[Id] = [s].[TaskId]
+) AS [t0] ON [l].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [u0].[UserId], [u0].[ListId]
+    FROM [UsersLists] AS [u0]
+    INNER JOIN [AspNetUsers] AS [a] ON [u0].[UserId] = [a].[Id]
+) AS [t1] ON [l].[Id] = [t1].[ListId]
+WHERE [l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)
+ORDER BY [l].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t1].[UserId], [t1].[ListId]
+2023-07-31 16:39:00.951 +03:00 [INF] Creating list
+2023-07-31 16:39:01.142 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 16:39:01.183 +03:00 [INF] List created
+2023-07-31 16:39:03.896 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-31 16:39:03.923 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t2].[Id], [t2].[AccessFailedCount], [t2].[ConcurrencyStamp], [t2].[Email], [t2].[EmailConfirmed], [t2].[FirstName], [t2].[LastName], [t2].[LockoutEnabled], [t2].[LockoutEnd], [t2].[NormalizedEmail], [t2].[NormalizedUserName], [t2].[PasswordHash], [t2].[PhoneNumber], [t2].[PhoneNumberConfirmed], [t2].[SecurityStamp], [t2].[TwoFactorEnabled], [t2].[UserName], [t2].[UserId], [t2].[ListId]
+FROM (
+    SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+    FROM [Lists] AS [l]
+    WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+        SELECT 1
+        FROM [UsersLists] AS [u]
+        WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[DateCompleted], [t1].[DateCreated], [t1].[DateDue], [t1].[Description], [t1].[IsComplete], [t1].[ListId], [t1].[OwnerId], [t1].[PriorityId], [t1].[Title], [t1].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t1]
+    LEFT JOIN [priorities] AS [p] ON [t1].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t1].[Id] = [s].[TaskId]
+    WHERE [t1].[ListId] = @__id_0
+) AS [t0] ON [t].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName], [u0].[UserId], [u0].[ListId]
+    FROM [UsersLists] AS [u0]
+    INNER JOIN [AspNetUsers] AS [a] ON [u0].[UserId] = [a].[Id]
+) AS [t2] ON [t].[Id] = [t2].[ListId]
+ORDER BY [t].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t2].[UserId], [t2].[ListId]
+2023-07-31 16:39:07.643 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 16:39:07.680 +03:00 [INF] Executed DbCommand (18ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Lists] SET [Name] = @p0, [OwnerId] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2023-07-31 16:39:07.718 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'ToDoAppAPI.DataBase.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Lists' with unique index 'IX_Lists_OwnerId_Name'. The duplicate key value is (16965206-8ad6-4ef1-9887-ab0e95a119f5, sssssss).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5c63b781-4804-46bd-a270-9678b99c7f4a
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Lists' with unique index 'IX_Lists_OwnerId_Name'. The duplicate key value is (16965206-8ad6-4ef1-9887-ab0e95a119f5, sssssss).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5c63b781-4804-46bd-a270-9678b99c7f4a
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-07-31 16:39:07.778 +03:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details. (3c2bfa01-fae0-4604-a532-2ebd7bdc5dd8)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Lists' with unique index 'IX_Lists_OwnerId_Name'. The duplicate key value is (16965206-8ad6-4ef1-9887-ab0e95a119f5, sssssss).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5c63b781-4804-46bd-a270-9678b99c7f4a
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ToDoAppAPI.Repositories.ListRepository.Update(ListEntity entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Repositories\ListRepository.cs:line 68
+   at ToDoAppAPI.Services.ListsServices.ListService.Update(UpdateListInputDto entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 70
+   at ToDoAppAPI.Controllers.ListsController.Update(UpdateListInputDto input) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 69
+   at lambda_method391(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-31 16:40:11.232 +03:00 [INF] Application is shutting down...
+2023-07-31 16:40:20.080 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:40:20.214 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:40:20.240 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:40:20.247 +03:00 [INF] Hosting environment: Production
+2023-07-31 16:40:20.250 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:40:24.122 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:40:24.128 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:40:25.814 +03:00 [INF] Executed DbCommand (75ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 16:40:26.144 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Lists] SET [Name] = @p0, [OwnerId] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2023-07-31 16:40:26.210 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'ToDoAppAPI.DataBase.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Lists' with unique index 'IX_Lists_OwnerId_Name'. The duplicate key value is (16965206-8ad6-4ef1-9887-ab0e95a119f5, sssssss).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:9ae0bc94-c3fa-48c7-b5ce-d50d09927369
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Lists' with unique index 'IX_Lists_OwnerId_Name'. The duplicate key value is (16965206-8ad6-4ef1-9887-ab0e95a119f5, sssssss).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:9ae0bc94-c3fa-48c7-b5ce-d50d09927369
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-07-31 16:40:26.252 +03:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details. (05b081bb-d700-4215-9b2f-8f1416c7c012)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert duplicate key row in object 'dbo.Lists' with unique index 'IX_Lists_OwnerId_Name'. The duplicate key value is (16965206-8ad6-4ef1-9887-ab0e95a119f5, sssssss).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:9ae0bc94-c3fa-48c7-b5ce-d50d09927369
+Error Number:2601,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ToDoAppAPI.Repositories.ListRepository.Update(ListEntity entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Repositories\ListRepository.cs:line 69
+   at ToDoAppAPI.Services.ListsServices.ListService.Update(UpdateListInputDto entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 70
+   at ToDoAppAPI.Controllers.ListsController.Update(UpdateListInputDto input) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 69
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-31 16:40:32.489 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 16:40:32.530 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [Lists]
+OUTPUT 1
+WHERE [Id] = @p0;
+2023-07-31 16:40:38.750 +03:00 [INF] Creating list
+2023-07-31 16:40:38.837 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-31 16:40:38.871 +03:00 [INF] List created
+2023-07-31 16:42:20.647 +03:00 [INF] Application is shutting down...
+2023-07-31 16:42:39.516 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:42:39.635 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:42:39.643 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:42:39.644 +03:00 [INF] Hosting environment: Development
+2023-07-31 16:42:39.644 +03:00 [INF] Content root path: E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:42:48.030 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:42:48.034 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:42:49.781 +03:00 [INF] Executed DbCommand (115ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 16:42:50.138 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 16:42:50.188 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 16:42:53.966 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 16:43:29.930 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 16:43:29.993 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 16:43:30.000 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 16:43:30.002 +03:00 [INF] Hosting environment: Production
+2023-07-31 16:43:30.003 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 16:43:35.789 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'TaskEntity'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:43:35.800 +03:00 [WRN] Entity 'ListEntity' has a global query filter defined and is the required end of a relationship with the entity 'UsersLists'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-07-31 16:43:37.413 +03:00 [INF] Executed DbCommand (76ms) [Parameters=[@__ef_filter__p_0='?' (Size = 450), @__ef_filter__p_1='?' (Size = 450), @__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE ([l].[OwnerId] = @__ef_filter__p_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__ef_filter__p_1)) AND [l].[Id] = @__id_0
+2023-07-31 16:43:37.699 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Lists] SET [Name] = @p0, [OwnerId] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;

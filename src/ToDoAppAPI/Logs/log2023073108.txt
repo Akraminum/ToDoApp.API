@@ -1,0 +1,113 @@
+2023-07-31 08:42:51.669 +03:00 [ERR] Not Logged In (fbbd2456-c605-4cd8-9623-31dab8ef0771)
+System.UnauthorizedAccessException: Not Logged In
+   at ToDoAppAPI.Services.ListsServices.ListService.GetUserId() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 93
+   at ToDoAppAPI.Services.ListsServices.ListService.GetAll() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 47
+   at ToDoAppAPI.Controllers.ListsController.GetAll() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 46
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-31 08:43:26.918 +03:00 [INF] Executed DbCommand (167ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 08:43:27.154 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 08:43:27.198 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 08:43:32.560 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE [l].[OwnerId] = @__userId_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__userId_0)
+2023-07-31 08:44:38.857 +03:00 [INF] Application is shutting down...
+2023-07-31 08:44:51.929 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 08:44:52.030 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 08:44:52.035 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 08:44:52.036 +03:00 [INF] Hosting environment: Production
+2023-07-31 08:44:52.064 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 08:44:55.134 +03:00 [INF] Executed DbCommand (59ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE [l].[OwnerId] = @__userId_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] = @__userId_0)
+2023-07-31 08:47:52.009 +03:00 [INF] Application is shutting down...
+2023-07-31 08:47:58.231 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 08:47:58.308 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 08:47:58.317 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 08:47:58.327 +03:00 [INF] Hosting environment: Production
+2023-07-31 08:47:58.330 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 08:48:06.224 +03:00 [INF] Executed DbCommand (67ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE [l].[OwnerId] = @__userId_0 OR EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    INNER JOIN [AspNetUsers] AS [a] ON [u].[UserId] = [a].[Id]
+    WHERE [l].[Id] = [u].[ListId] AND [a].[Id] = @__userId_0)
+2023-07-31 08:49:17.719 +03:00 [INF] Application is shutting down...
+2023-07-31 08:49:23.789 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-31 08:49:23.851 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-31 08:49:23.858 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-31 08:49:23.863 +03:00 [INF] Hosting environment: Production
+2023-07-31 08:49:23.864 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-31 08:49:29.549 +03:00 [ERR] Not Logged In (4da854a2-85a7-4044-8cc2-0df5f3810e1a)
+System.UnauthorizedAccessException: Not Logged In
+   at ToDoAppAPI.Services.ListsServices.ListService.GetUserId() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 93
+   at ToDoAppAPI.Services.ListsServices.ListService.GetAll() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 47
+   at ToDoAppAPI.Controllers.ListsController.GetAll() in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 46
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-31 08:50:00.592 +03:00 [INF] Executed DbCommand (59ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-31 08:50:00.828 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-31 08:50:00.890 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-31 08:50:03.289 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+WHERE [l].[OwnerId] = @__userId_0 OR NOT EXISTS (
+    SELECT 1
+    FROM [UsersLists] AS [u]
+    WHERE [l].[Id] = [u].[ListId] AND [u].[UserId] <> @__userId_0)

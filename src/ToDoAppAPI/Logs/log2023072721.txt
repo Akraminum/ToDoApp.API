@@ -1,0 +1,321 @@
+2023-07-27 21:01:36.722 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 21:01:36.807 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 21:01:36.816 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 21:01:36.816 +03:00 [INF] Hosting environment: Development
+2023-07-27 21:01:36.816 +03:00 [INF] Content root path: E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 21:01:40.060 +03:00 [INF] Creating list
+2023-07-27 21:01:40.197 +03:00 [ERR] Not Logged In (04da291d-193c-467d-8bd6-b431c5941010)
+System.UnauthorizedAccessException: Not Logged In
+   at ToDoAppAPI.Services.ListsServices.ListService.CreateList(CreateListInputDto entity) in E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 38
+   at ToDoAppAPI.Controllers.ListsController.CreateList(CreateListInputDto input) in E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 34
+   at lambda_method12(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-27 21:01:46.922 +03:00 [INF] Creating list
+2023-07-27 21:01:47.025 +03:00 [ERR] Not Logged In (72c2d6b5-2d38-48ec-936a-c2587ff2a547)
+System.UnauthorizedAccessException: Not Logged In
+   at ToDoAppAPI.Services.ListsServices.ListService.CreateList(CreateListInputDto entity) in E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 38
+   at ToDoAppAPI.Controllers.ListsController.CreateList(CreateListInputDto input) in E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 34
+   at lambda_method12(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-27 21:01:58.702 +03:00 [INF] Executed DbCommand (135ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 21:01:59.151 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-27 21:01:59.223 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 21:02:12.224 +03:00 [INF] Creating list
+2023-07-27 21:03:35.088 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 21:03:35.182 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 21:03:35.197 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 21:03:35.197 +03:00 [INF] Hosting environment: Development
+2023-07-27 21:03:35.198 +03:00 [INF] Content root path: E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 21:03:38.965 +03:00 [INF] Creating list
+2023-07-27 21:05:59.519 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 21:05:59.638 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 21:05:59.654 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 21:05:59.656 +03:00 [INF] Hosting environment: Development
+2023-07-27 21:05:59.656 +03:00 [INF] Content root path: E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 21:06:02.058 +03:00 [INF] Creating list
+2023-07-27 21:07:39.944 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 21:07:40.086 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 21:07:40.477 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 21:07:40.505 +03:00 [INF] Hosting environment: Production
+2023-07-27 21:07:40.506 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 21:07:44.076 +03:00 [INF] Executed DbCommand (52ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 21:07:44.333 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-27 21:07:44.399 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 21:08:14.906 +03:00 [INF] Creating list
+2023-07-27 21:08:15.166 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-27 21:08:15.218 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'ToDoAppAPI.DataBase.AppDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Lists_AspNetUsers_OwnerId". The conflict occurred in database "Resume.ToDoApp", table "dbo.AspNetUsers", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:d9a94ae8-778e-4640-8e77-155ecd4669e7
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Lists_AspNetUsers_OwnerId". The conflict occurred in database "Resume.ToDoApp", table "dbo.AspNetUsers", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:d9a94ae8-778e-4640-8e77-155ecd4669e7
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2023-07-27 21:08:15.279 +03:00 [ERR] An error occurred while saving the entity changes. See the inner exception for details. (b7d82dc8-28d1-4423-b777-603abb556025)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK_Lists_AspNetUsers_OwnerId". The conflict occurred in database "Resume.ToDoApp", table "dbo.AspNetUsers", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetAsync(Int32 startCommandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:d9a94ae8-778e-4640-8e77-155ecd4669e7
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ToDoAppAPI.Repositories.ListRepository.Create(ListEntity entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Repositories\ListRepository.cs:line 23
+   at ToDoAppAPI.Services.ListsServices.ListService.CreateList(CreateListInputDto entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 42
+   at ToDoAppAPI.Controllers.ListsController.CreateList(CreateListInputDto input) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 34
+   at lambda_method246(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-27 21:11:00.359 +03:00 [INF] Application is shutting down...
+2023-07-27 21:11:08.532 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 21:11:08.653 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 21:11:08.660 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 21:11:08.662 +03:00 [INF] Hosting environment: Production
+2023-07-27 21:11:08.663 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 21:11:10.541 +03:00 [INF] Creating list
+2023-07-27 21:11:10.545 +03:00 [INF] List created
+2023-07-27 21:11:57.700 +03:00 [INF] Application is shutting down...
+2023-07-27 21:12:04.359 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 21:12:04.476 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 21:12:04.482 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 21:12:04.484 +03:00 [INF] Hosting environment: Production
+2023-07-27 21:12:04.486 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 21:12:06.714 +03:00 [INF] Creating list
+2023-07-27 21:12:06.720 +03:00 [INF] List created
+2023-07-27 21:12:15.283 +03:00 [INF] Executed DbCommand (55ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 21:12:15.497 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-27 21:12:15.547 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 21:12:19.281 +03:00 [INF] Creating list
+2023-07-27 21:12:19.283 +03:00 [INF] List created
+2023-07-27 21:12:50.712 +03:00 [INF] Application is shutting down...
+2023-07-27 21:13:03.893 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 21:13:03.941 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 21:13:03.946 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 21:13:03.947 +03:00 [INF] Hosting environment: Production
+2023-07-27 21:13:03.949 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 21:13:07.341 +03:00 [INF] Creating list
+2023-07-27 21:13:07.345 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: JWT for ToDoAppAPI.com 
+2023-07-27 21:13:07.346 +03:00 [WRN] - jti: fb268780-83d3-46c5-8911-4e3483c51db9 
+2023-07-27 21:13:07.351 +03:00 [WRN] - iat: 7/27/2023 6:12:15 PM 
+2023-07-27 21:13:07.353 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 16965206-8ad6-4ef1-9887-ab0e95a119f5 
+2023-07-27 21:13:07.355 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name: Nedra_Blick81@yahoo.com 
+2023-07-27 21:13:07.356 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress: Nedra_Blick81@yahoo.com 
+2023-07-27 21:13:07.357 +03:00 [WRN] - exp: 1690481595 
+2023-07-27 21:13:07.358 +03:00 [WRN] - iss: ToDoAppAPI-Backend.com 
+2023-07-27 21:13:07.360 +03:00 [WRN] - aud: ToDoAppAPI-Frontend.com 
+2023-07-27 21:13:07.362 +03:00 [INF] List created
+2023-07-27 21:13:54.740 +03:00 [INF] Application is shutting down...
+2023-07-27 21:14:00.828 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 21:14:00.885 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 21:14:00.902 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 21:14:00.904 +03:00 [INF] Hosting environment: Production
+2023-07-27 21:14:00.905 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 21:14:07.248 +03:00 [INF] Creating list
+2023-07-27 21:14:07.254 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: JWT for ToDoAppAPI.com 
+2023-07-27 21:14:07.257 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 16965206-8ad6-4ef1-9887-ab0e95a119f5 
+2023-07-27 21:14:07.259 +03:00 [INF] List created
+2023-07-27 21:15:04.694 +03:00 [INF] Application is shutting down...
+2023-07-27 21:15:19.796 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 21:15:19.876 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 21:15:19.885 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 21:15:19.888 +03:00 [INF] Hosting environment: Development
+2023-07-27 21:15:19.889 +03:00 [INF] Content root path: E:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 21:15:39.944 +03:00 [INF] Executed DbCommand (153ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 21:17:18.333 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-27 21:17:25.405 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 21:19:45.437 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 21:19:50.858 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-27 21:19:50.868 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 21:21:08.472 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-27 21:21:08.573 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-27 21:21:08.587 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-27 21:21:08.588 +03:00 [INF] Hosting environment: Production
+2023-07-27 21:21:08.589 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-27 21:21:14.320 +03:00 [INF] Creating list
+2023-07-27 21:21:14.326 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: JWT for ToDoAppAPI.com 
+2023-07-27 21:21:14.327 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 16965206-8ad6-4ef1-9887-ab0e95a119f5 
+2023-07-27 21:21:14.328 +03:00 [INF] List created
+2023-07-27 21:21:29.910 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-27 21:21:30.197 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-27 21:21:30.258 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-27 21:21:30.278 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-07-27 21:21:30.344 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-27 21:21:32.643 +03:00 [INF] Creating list
+2023-07-27 21:21:32.644 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: JWT for ToDoAppAPI.com 
+2023-07-27 21:21:32.646 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: a7a00f74-9d45-4d1e-ae0d-6f59f9f15bc6 
+2023-07-27 21:21:32.649 +03:00 [INF] List created

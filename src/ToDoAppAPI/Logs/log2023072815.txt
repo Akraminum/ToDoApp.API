@@ -1,0 +1,513 @@
+2023-07-28 15:00:23.261 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 15:00:23.315 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 15:00:23.320 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 15:00:23.323 +03:00 [INF] Hosting environment: Production
+2023-07-28 15:00:23.327 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 15:00:27.555 +03:00 [ERR] The LINQ expression 't' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information. (96c60790-59c6-4ff4-a6e4-aa13b9fcddab)
+System.InvalidOperationException: The LINQ expression 't' could not be translated. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.VisitParameter(ParameterExpression parameterExpression)
+   at System.Linq.Expressions.ParameterExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.VisitMember(MemberExpression memberExpression)
+   at System.Linq.Expressions.MemberExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at Microsoft.EntityFrameworkCore.SqlServer.Query.Internal.SqlServerSqlTranslatingExpressionVisitor.VisitBinary(BinaryExpression binaryExpression)
+   at System.Linq.Expressions.BinaryExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.TranslateInternal(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalSqlTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateExpression(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateLambdaExpression(ShapedQueryExpression shapedQueryExpression, LambdaExpression lambdaExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateWhere(ShapedQueryExpression source, LambdaExpression predicate)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.TranslateSubquery(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.IncludeExpression.VisitChildren(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.VisitExtension(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.IncludeExpression.VisitChildren(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.VisitExtension(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Translate(SelectExpression selectExpression, Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateSelect(ShapedQueryExpression source, LambdaExpression selector)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.TranslateSubquery(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.IncludeExpression.VisitChildren(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.VisitExtension(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.VisitExtension(Expression extensionExpression)
+   at System.Linq.Expressions.Expression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Visit(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.Internal.RelationalProjectionBindingExpressionVisitor.Translate(SelectExpression selectExpression, Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.TranslateSelect(ShapedQueryExpression source, LambdaExpression selector)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.VisitMethodCall(MethodCallExpression methodCallExpression)
+   at System.Linq.Expressions.MethodCallExpression.Accept(ExpressionVisitor visitor)
+   at System.Linq.Expressions.ExpressionVisitor.Visit(Expression node)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at ToDoAppAPI.Repositories.ListRepository.GetById(Int32 id) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Repositories\ListRepository.cs:line 60
+   at ToDoAppAPI.Services.ListsServices.ListService.GetById(Int32 id) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 52
+   at ToDoAppAPI.Controllers.ListsController.GetById(Int32 id) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 49
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-28 15:02:51.651 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 15:02:51.746 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 15:02:51.755 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 15:02:51.757 +03:00 [INF] Hosting environment: Production
+2023-07-28 15:02:51.757 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 15:02:54.188 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-28 15:02:54.905 +03:00 [INF] Executed DbCommand (378ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0]
+FROM (
+    SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+    FROM [Lists] AS [l]
+    WHERE [l].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[DateCompleted], [t1].[DateCreated], [t1].[DateDue], [t1].[Description], [t1].[IsComplete], [t1].[ListId], [t1].[OwnerId], [t1].[PriorityId], [t1].[Title], [t1].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t1]
+    LEFT JOIN [priorities] AS [p] ON [t1].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t1].[Id] = [s].[TaskId]
+    WHERE [t1].[ListId] = @__id_0
+) AS [t0] ON [t].[Id] = [t0].[ListId]
+ORDER BY [t].[Id], [t0].[Id], [t0].[Id0]
+2023-07-28 15:05:14.217 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 15:05:14.340 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 15:05:14.349 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 15:05:14.350 +03:00 [INF] Hosting environment: Production
+2023-07-28 15:05:14.350 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 15:10:04.370 +03:00 [INF] Application is shutting down...
+2023-07-28 15:14:18.023 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 15:14:19.131 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 15:14:20.195 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 15:14:20.916 +03:00 [INF] Hosting environment: Production
+2023-07-28 15:14:21.469 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 15:14:24.558 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-28 15:14:25.239 +03:00 [INF] Executed DbCommand (131ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t2].[UserId], [t2].[ListId], [t2].[Id], [t2].[AccessFailedCount], [t2].[ConcurrencyStamp], [t2].[Email], [t2].[EmailConfirmed], [t2].[FirstName], [t2].[LastName], [t2].[LockoutEnabled], [t2].[LockoutEnd], [t2].[NormalizedEmail], [t2].[NormalizedUserName], [t2].[PasswordHash], [t2].[PhoneNumber], [t2].[PhoneNumberConfirmed], [t2].[SecurityStamp], [t2].[TwoFactorEnabled], [t2].[UserName]
+FROM (
+    SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+    FROM [Lists] AS [l]
+    WHERE [l].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[DateCompleted], [t1].[DateCreated], [t1].[DateDue], [t1].[Description], [t1].[IsComplete], [t1].[ListId], [t1].[OwnerId], [t1].[PriorityId], [t1].[Title], [t1].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t1]
+    LEFT JOIN [priorities] AS [p] ON [t1].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t1].[Id] = [s].[TaskId]
+    WHERE [t1].[ListId] = @__id_0
+) AS [t0] ON [t].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [u].[UserId], [u].[ListId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [UsersLists] AS [u]
+    INNER JOIN [AspNetUsers] AS [a] ON [u].[UserId] = [a].[Id]
+) AS [t2] ON [t].[Id] = [t2].[ListId]
+ORDER BY [t].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t2].[UserId], [t2].[ListId]
+2023-07-28 15:19:02.477 +03:00 [INF] Application is shutting down...
+2023-07-28 15:19:11.956 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 15:19:12.017 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 15:19:12.023 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 15:19:12.025 +03:00 [INF] Hosting environment: Production
+2023-07-28 15:19:12.027 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 15:21:11.863 +03:00 [INF] Application is shutting down...
+2023-07-28 15:21:23.795 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 15:21:23.850 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 15:21:23.855 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 15:21:23.858 +03:00 [INF] Hosting environment: Production
+2023-07-28 15:21:23.859 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 15:22:03.043 +03:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]
+2023-07-28 15:34:04.717 +03:00 [INF] Application is shutting down...
+2023-07-28 15:34:44.781 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 15:34:44.819 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 15:34:44.823 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 15:34:44.825 +03:00 [INF] Hosting environment: Production
+2023-07-28 15:34:44.826 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 15:36:32.527 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-28 15:36:32.908 +03:00 [INF] Executed DbCommand (59ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t2].[UserId], [t2].[ListId], [t2].[Id], [t2].[AccessFailedCount], [t2].[ConcurrencyStamp], [t2].[Email], [t2].[EmailConfirmed], [t2].[FirstName], [t2].[LastName], [t2].[LockoutEnabled], [t2].[LockoutEnd], [t2].[NormalizedEmail], [t2].[NormalizedUserName], [t2].[PasswordHash], [t2].[PhoneNumber], [t2].[PhoneNumberConfirmed], [t2].[SecurityStamp], [t2].[TwoFactorEnabled], [t2].[UserName]
+FROM (
+    SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+    FROM [Lists] AS [l]
+    WHERE [l].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[DateCompleted], [t1].[DateCreated], [t1].[DateDue], [t1].[Description], [t1].[IsComplete], [t1].[ListId], [t1].[OwnerId], [t1].[PriorityId], [t1].[Title], [t1].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t1]
+    LEFT JOIN [priorities] AS [p] ON [t1].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t1].[Id] = [s].[TaskId]
+    WHERE [t1].[ListId] = @__id_0
+) AS [t0] ON [t].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [u].[UserId], [u].[ListId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [UsersLists] AS [u]
+    INNER JOIN [AspNetUsers] AS [a] ON [u].[UserId] = [a].[Id]
+) AS [t2] ON [t].[Id] = [t2].[ListId]
+ORDER BY [t].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t2].[UserId], [t2].[ListId]
+2023-07-28 15:36:33.022 +03:00 [ERR] Not Logged In (0ce600a1-54f8-4215-a448-d6be7b2b876c)
+System.UnauthorizedAccessException: Not Logged In
+   at ToDoAppAPI.Services.ListsServices.ListService.Update(UpdateListInputDto entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 73
+   at ToDoAppAPI.Controllers.ListsController.Update(UpdateListInputDto input) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 68
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-28 15:36:42.022 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-28 15:36:42.166 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-28 15:36:42.188 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-28 15:36:44.800 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t2].[UserId], [t2].[ListId], [t2].[Id], [t2].[AccessFailedCount], [t2].[ConcurrencyStamp], [t2].[Email], [t2].[EmailConfirmed], [t2].[FirstName], [t2].[LastName], [t2].[LockoutEnabled], [t2].[LockoutEnd], [t2].[NormalizedEmail], [t2].[NormalizedUserName], [t2].[PasswordHash], [t2].[PhoneNumber], [t2].[PhoneNumberConfirmed], [t2].[SecurityStamp], [t2].[TwoFactorEnabled], [t2].[UserName]
+FROM (
+    SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+    FROM [Lists] AS [l]
+    WHERE [l].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[DateCompleted], [t1].[DateCreated], [t1].[DateDue], [t1].[Description], [t1].[IsComplete], [t1].[ListId], [t1].[OwnerId], [t1].[PriorityId], [t1].[Title], [t1].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t1]
+    LEFT JOIN [priorities] AS [p] ON [t1].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t1].[Id] = [s].[TaskId]
+    WHERE [t1].[ListId] = @__id_0
+) AS [t0] ON [t].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [u].[UserId], [u].[ListId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [UsersLists] AS [u]
+    INNER JOIN [AspNetUsers] AS [a] ON [u].[UserId] = [a].[Id]
+) AS [t2] ON [t].[Id] = [t2].[ListId]
+ORDER BY [t].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t2].[UserId], [t2].[ListId]
+2023-07-28 15:36:44.813 +03:00 [ERR] Not Authorized (287764a0-1b30-40c1-a72b-aaf672433e14)
+System.UnauthorizedAccessException: Not Authorized
+   at ToDoAppAPI.Services.ListsServices.ListService.Update(UpdateListInputDto entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 79
+   at ToDoAppAPI.Controllers.ListsController.Update(UpdateListInputDto input) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 68
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-28 15:36:50.039 +03:00 [INF] Creating list
+2023-07-28 15:36:50.259 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-28 15:36:50.320 +03:00 [INF] List created
+2023-07-28 15:36:53.514 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t2].[UserId], [t2].[ListId], [t2].[Id], [t2].[AccessFailedCount], [t2].[ConcurrencyStamp], [t2].[Email], [t2].[EmailConfirmed], [t2].[FirstName], [t2].[LastName], [t2].[LockoutEnabled], [t2].[LockoutEnd], [t2].[NormalizedEmail], [t2].[NormalizedUserName], [t2].[PasswordHash], [t2].[PhoneNumber], [t2].[PhoneNumberConfirmed], [t2].[SecurityStamp], [t2].[TwoFactorEnabled], [t2].[UserName]
+FROM (
+    SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+    FROM [Lists] AS [l]
+    WHERE [l].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[DateCompleted], [t1].[DateCreated], [t1].[DateDue], [t1].[Description], [t1].[IsComplete], [t1].[ListId], [t1].[OwnerId], [t1].[PriorityId], [t1].[Title], [t1].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t1]
+    LEFT JOIN [priorities] AS [p] ON [t1].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t1].[Id] = [s].[TaskId]
+    WHERE [t1].[ListId] = @__id_0
+) AS [t0] ON [t].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [u].[UserId], [u].[ListId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [UsersLists] AS [u]
+    INNER JOIN [AspNetUsers] AS [a] ON [u].[UserId] = [a].[Id]
+) AS [t2] ON [t].[Id] = [t2].[ListId]
+ORDER BY [t].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t2].[UserId], [t2].[ListId]
+2023-07-28 15:36:53.537 +03:00 [ERR] Not Authorized (a1594567-49fd-4af9-99d9-d13fad98f6a2)
+System.UnauthorizedAccessException: Not Authorized
+   at ToDoAppAPI.Services.ListsServices.ListService.Update(UpdateListInputDto entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 79
+   at ToDoAppAPI.Controllers.ListsController.Update(UpdateListInputDto input) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 68
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-28 15:36:57.033 +03:00 [INF] Creating list
+2023-07-28 15:36:57.037 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-28 15:36:57.049 +03:00 [INF] List created
+2023-07-28 15:37:29.163 +03:00 [INF] Application is shutting down...
+2023-07-28 15:37:36.108 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 15:37:36.151 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 15:37:36.156 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 15:37:36.157 +03:00 [INF] Hosting environment: Production
+2023-07-28 15:37:36.158 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 15:37:37.514 +03:00 [INF] Creating list
+2023-07-28 15:37:39.075 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-28 15:37:39.162 +03:00 [INF] List created
+2023-07-28 15:37:42.108 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-28 15:37:42.188 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t2].[UserId], [t2].[ListId], [t2].[Id], [t2].[AccessFailedCount], [t2].[ConcurrencyStamp], [t2].[Email], [t2].[EmailConfirmed], [t2].[FirstName], [t2].[LastName], [t2].[LockoutEnabled], [t2].[LockoutEnd], [t2].[NormalizedEmail], [t2].[NormalizedUserName], [t2].[PasswordHash], [t2].[PhoneNumber], [t2].[PhoneNumberConfirmed], [t2].[SecurityStamp], [t2].[TwoFactorEnabled], [t2].[UserName]
+FROM (
+    SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+    FROM [Lists] AS [l]
+    WHERE [l].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[DateCompleted], [t1].[DateCreated], [t1].[DateDue], [t1].[Description], [t1].[IsComplete], [t1].[ListId], [t1].[OwnerId], [t1].[PriorityId], [t1].[Title], [t1].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t1]
+    LEFT JOIN [priorities] AS [p] ON [t1].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t1].[Id] = [s].[TaskId]
+    WHERE [t1].[ListId] = @__id_0
+) AS [t0] ON [t].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [u].[UserId], [u].[ListId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [UsersLists] AS [u]
+    INNER JOIN [AspNetUsers] AS [a] ON [u].[UserId] = [a].[Id]
+) AS [t2] ON [t].[Id] = [t2].[ListId]
+ORDER BY [t].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t2].[UserId], [t2].[ListId]
+2023-07-28 15:37:42.226 +03:00 [ERR] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+UpdateListInputDto -> ListEntity
+ToDoAppAPI.Dtos.Lists.UpdateListInputDto -> ToDoAppAPI.Entities.ListEntity (ab7f17a7-859d-4b00-b4b2-4b326cf57801)
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+UpdateListInputDto -> ListEntity
+ToDoAppAPI.Dtos.Lists.UpdateListInputDto -> ToDoAppAPI.Entities.ListEntity
+   at lambda_method210(Closure , UpdateListInputDto , ListEntity , ResolutionContext )
+   at ToDoAppAPI.Services.ListsServices.ListService.Update(UpdateListInputDto entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 81
+   at ToDoAppAPI.Controllers.ListsController.Update(UpdateListInputDto input) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 68
+   at lambda_method169(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-28 15:42:57.314 +03:00 [INF] Application is shutting down...
+2023-07-28 15:43:05.303 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 15:43:05.658 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 15:43:05.670 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 15:43:05.673 +03:00 [INF] Hosting environment: Production
+2023-07-28 15:43:05.677 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 15:43:09.728 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-28 15:43:10.187 +03:00 [INF] Executed DbCommand (71ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t2].[UserId], [t2].[ListId], [t2].[Id], [t2].[AccessFailedCount], [t2].[ConcurrencyStamp], [t2].[Email], [t2].[EmailConfirmed], [t2].[FirstName], [t2].[LastName], [t2].[LockoutEnabled], [t2].[LockoutEnd], [t2].[NormalizedEmail], [t2].[NormalizedUserName], [t2].[PasswordHash], [t2].[PhoneNumber], [t2].[PhoneNumberConfirmed], [t2].[SecurityStamp], [t2].[TwoFactorEnabled], [t2].[UserName]
+FROM (
+    SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+    FROM [Lists] AS [l]
+    WHERE [l].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[DateCompleted], [t1].[DateCreated], [t1].[DateDue], [t1].[Description], [t1].[IsComplete], [t1].[ListId], [t1].[OwnerId], [t1].[PriorityId], [t1].[Title], [t1].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t1]
+    LEFT JOIN [priorities] AS [p] ON [t1].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t1].[Id] = [s].[TaskId]
+    WHERE [t1].[ListId] = @__id_0
+) AS [t0] ON [t].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [u].[UserId], [u].[ListId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [UsersLists] AS [u]
+    INNER JOIN [AspNetUsers] AS [a] ON [u].[UserId] = [a].[Id]
+) AS [t2] ON [t].[Id] = [t2].[ListId]
+ORDER BY [t].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t2].[UserId], [t2].[ListId]
+2023-07-28 15:43:10.301 +03:00 [ERR] Not Logged In (5e21ae90-bc80-4bb3-b568-1d05a48a7e52)
+System.UnauthorizedAccessException: Not Logged In
+   at ToDoAppAPI.Services.ListsServices.ListService.Update(UpdateListInputDto entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 73
+   at ToDoAppAPI.Controllers.ListsController.Update(UpdateListInputDto input) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 68
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-28 15:43:20.733 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-28 15:43:20.871 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-28 15:43:20.893 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-28 15:43:23.199 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t2].[UserId], [t2].[ListId], [t2].[Id], [t2].[AccessFailedCount], [t2].[ConcurrencyStamp], [t2].[Email], [t2].[EmailConfirmed], [t2].[FirstName], [t2].[LastName], [t2].[LockoutEnabled], [t2].[LockoutEnd], [t2].[NormalizedEmail], [t2].[NormalizedUserName], [t2].[PasswordHash], [t2].[PhoneNumber], [t2].[PhoneNumberConfirmed], [t2].[SecurityStamp], [t2].[TwoFactorEnabled], [t2].[UserName]
+FROM (
+    SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+    FROM [Lists] AS [l]
+    WHERE [l].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[DateCompleted], [t1].[DateCreated], [t1].[DateDue], [t1].[Description], [t1].[IsComplete], [t1].[ListId], [t1].[OwnerId], [t1].[PriorityId], [t1].[Title], [t1].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t1]
+    LEFT JOIN [priorities] AS [p] ON [t1].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t1].[Id] = [s].[TaskId]
+    WHERE [t1].[ListId] = @__id_0
+) AS [t0] ON [t].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [u].[UserId], [u].[ListId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [UsersLists] AS [u]
+    INNER JOIN [AspNetUsers] AS [a] ON [u].[UserId] = [a].[Id]
+) AS [t2] ON [t].[Id] = [t2].[ListId]
+ORDER BY [t].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t2].[UserId], [t2].[ListId]
+2023-07-28 15:43:23.228 +03:00 [ERR] Missing type map configuration or unsupported mapping.
+
+Mapping types:
+UpdateListInputDto -> ListEntity
+ToDoAppAPI.Dtos.Lists.UpdateListInputDto -> ToDoAppAPI.Entities.ListEntity (d126d0a9-f49a-49cd-afda-3060160839ee)
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+UpdateListInputDto -> ListEntity
+ToDoAppAPI.Dtos.Lists.UpdateListInputDto -> ToDoAppAPI.Entities.ListEntity
+   at lambda_method316(Closure , UpdateListInputDto , ListEntity , ResolutionContext )
+   at ToDoAppAPI.Services.ListsServices.ListService.Update(UpdateListInputDto entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 81
+   at ToDoAppAPI.Controllers.ListsController.Update(UpdateListInputDto input) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 68
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-28 15:44:46.274 +03:00 [INF] Application is shutting down...
+2023-07-28 15:44:53.051 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 15:44:53.345 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 15:44:53.351 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 15:44:53.353 +03:00 [INF] Hosting environment: Production
+2023-07-28 15:44:53.354 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 15:44:58.311 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2023-07-28 15:44:58.791 +03:00 [INF] Executed DbCommand (92ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[Name], [t].[OwnerId], [t0].[Id], [t0].[DateCompleted], [t0].[DateCreated], [t0].[DateDue], [t0].[Description], [t0].[IsComplete], [t0].[ListId], [t0].[OwnerId], [t0].[PriorityId], [t0].[Title], [t0].[UserCompletedId], [t0].[Id0], [t0].[Color], [t0].[Name], [t0].[Order], [t0].[Id1], [t0].[Body], [t0].[IsComplete0], [t0].[OwnerId0], [t0].[TaskId], [t0].[UserCompletedId0], [t2].[UserId], [t2].[ListId], [t2].[Id], [t2].[AccessFailedCount], [t2].[ConcurrencyStamp], [t2].[Email], [t2].[EmailConfirmed], [t2].[FirstName], [t2].[LastName], [t2].[LockoutEnabled], [t2].[LockoutEnd], [t2].[NormalizedEmail], [t2].[NormalizedUserName], [t2].[PasswordHash], [t2].[PhoneNumber], [t2].[PhoneNumberConfirmed], [t2].[SecurityStamp], [t2].[TwoFactorEnabled], [t2].[UserName]
+FROM (
+    SELECT TOP(1) [l].[Id], [l].[Name], [l].[OwnerId]
+    FROM [Lists] AS [l]
+    WHERE [l].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [t1].[Id], [t1].[DateCompleted], [t1].[DateCreated], [t1].[DateDue], [t1].[Description], [t1].[IsComplete], [t1].[ListId], [t1].[OwnerId], [t1].[PriorityId], [t1].[Title], [t1].[UserCompletedId], [p].[Id] AS [Id0], [p].[Color], [p].[Name], [p].[Order], [s].[Id] AS [Id1], [s].[Body], [s].[IsComplete] AS [IsComplete0], [s].[OwnerId] AS [OwnerId0], [s].[TaskId], [s].[UserCompletedId] AS [UserCompletedId0]
+    FROM [Tasks] AS [t1]
+    LEFT JOIN [priorities] AS [p] ON [t1].[PriorityId] = [p].[Id]
+    LEFT JOIN [Steps] AS [s] ON [t1].[Id] = [s].[TaskId]
+    WHERE [t1].[ListId] = @__id_0
+) AS [t0] ON [t].[Id] = [t0].[ListId]
+LEFT JOIN (
+    SELECT [u].[UserId], [u].[ListId], [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+    FROM [UsersLists] AS [u]
+    INNER JOIN [AspNetUsers] AS [a] ON [u].[UserId] = [a].[Id]
+) AS [t2] ON [t].[Id] = [t2].[ListId]
+ORDER BY [t].[Id], [t0].[Id], [t0].[Id0], [t0].[Id1], [t2].[UserId], [t2].[ListId]
+2023-07-28 15:44:59.213 +03:00 [INF] Executed DbCommand (128ms) [Parameters=[@p2='?' (DbType = Int32), @p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+UPDATE [Lists] SET [Name] = @p0, [OwnerId] = @p1
+OUTPUT 1
+WHERE [Id] = @p2;
+2023-07-28 15:45:08.395 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [l].[Id], [l].[Name], [l].[OwnerId]
+FROM [Lists] AS [l]

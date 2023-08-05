@@ -1,0 +1,80 @@
+2023-07-28 10:41:38.412 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 10:41:38.459 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 10:41:38.466 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 10:41:38.467 +03:00 [INF] Hosting environment: Production
+2023-07-28 10:41:38.467 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 10:50:37.529 +03:00 [INF] Creating list
+2023-07-28 10:50:37.533 +03:00 [INF] List created
+2023-07-28 10:51:46.434 +03:00 [INF] Executed DbCommand (134ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-28 10:51:46.666 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-28 10:51:46.730 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-28 10:51:46.753 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__normalizedName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0
+2023-07-28 10:51:46.788 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__role_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0
+2023-07-28 10:51:54.756 +03:00 [INF] Creating list
+2023-07-28 10:51:54.757 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: JWT for ToDoAppAPI.com 
+2023-07-28 10:51:54.758 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 8c260fcf-6d61-474c-871f-1e5a2e5c0ac2 
+2023-07-28 10:51:54.760 +03:00 [INF] List created
+2023-07-28 10:56:46.973 +03:00 [INF] Creating list
+2023-07-28 10:56:46.974 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: JWT for ToDoAppAPI.com 
+2023-07-28 10:56:46.975 +03:00 [WRN] - http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier: 8c260fcf-6d61-474c-871f-1e5a2e5c0ac2 
+2023-07-28 10:56:46.976 +03:00 [INF] List created
+2023-07-28 10:57:38.147 +03:00 [INF] Application is shutting down...
+2023-07-28 10:57:53.839 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 10:57:53.879 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 10:57:53.884 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 10:57:53.885 +03:00 [INF] Hosting environment: Production
+2023-07-28 10:57:53.886 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 10:57:59.429 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-28 10:57:59.668 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-28 10:57:59.718 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-28 10:58:06.445 +03:00 [INF] Creating list
+2023-07-28 10:58:06.447 +03:00 [WRN] http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier -> 16965206-8ad6-4ef1-9887-ab0e95a119f5
+2023-07-28 10:58:06.452 +03:00 [INF] List created
+2023-07-28 10:58:51.572 +03:00 [INF] Application is shutting down...
+2023-07-28 10:59:04.337 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 10:59:04.378 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 10:59:04.383 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 10:59:04.385 +03:00 [INF] Hosting environment: Production
+2023-07-28 10:59:04.388 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 10:59:07.598 +03:00 [INF] Executed DbCommand (70ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-28 10:59:07.853 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-28 10:59:07.898 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-28 10:59:12.441 +03:00 [INF] Creating list
+2023-07-28 10:59:12.444 +03:00 [WRN] http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier -> 16965206-8ad6-4ef1-9887-ab0e95a119f5
+2023-07-28 10:59:12.447 +03:00 [INF] List created

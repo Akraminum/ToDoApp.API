@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ToDoAppAPI.Dtos.Users.Authenticate
+namespace ToDoAppAPI.Dtos.Account
 {
     public class AuthenticationRequestDto
     {

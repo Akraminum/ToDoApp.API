@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using ToDoAppAPI.Entities;
+using ToDoAppAPI.Dtos.Steps;
 
-namespace ToDoAppAPI.Dtos
+namespace ToDoAppAPI.Tasks.Dtos
 {
     public class TaskDto
     {
@@ -15,6 +16,7 @@ namespace ToDoAppAPI.Dtos
         public int? ListId { get; set; }
 
         public PriorityEntity? Priority { get; set; }
+        public List<StepDto>? Steps { get; set; }
 
 
     }

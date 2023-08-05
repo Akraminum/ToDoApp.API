@@ -1,91 +1,83 @@
-﻿//using AutoMapper;
-//using Azure.Core;
-//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.EntityFrameworkCore;
-//using Microsoft.IdentityModel.Tokens;
-//using System.Linq;
-//using System.Threading.Tasks;
-//using ToDoAppAPI.DataBase;
-//using ToDoAppAPI.Dtos;
-//using ToDoAppAPI.Model;
+using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
+using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using ToDoAppAPI.Dtos.Lists;
+using ToDoAppAPI.Entities;
+using ToDoAppAPI.Repositories.IRepository;
+using ToDoAppAPI.Services.ListsServices;
 
-//// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+namespace ToDoAppAPI.Controllers;
 
-//namespace ToDoAppAPI.Controllers
-//{
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    public class ListsController : ControllerBase
-//    {
-//        private readonly AppDbContext _dbContext;
-//        private readonly IMapper _mapper;
+[Route("api/[controller]")]
+[ApiController]
+public class ListsController : ControllerBase
+{
+    private ILogger<ListsController> _logger;
+    private IMapper _mapper;
+    private IListService _listService;
 
-//        public ListsController(AppDbContext dbContext, IMapper mapper)
-//        {
-//            _dbContext = dbContext;
-//            _mapper = mapper;
-//        }
+    public ListsController(
+        ILogger<ListsController> logger,
+        IMapper mapper, 
+        IListService listService 
+    )
+    {
+        _logger = logger;
+        _mapper = mapper;
+        _listService = listService;
+    }
 
-
-//        [HttpGet]
-//        public ActionResult<List<ListDto>> GetLists([FromQuery] ListQueryParamsDto queryParamsDto)
-//        {
-
-//            var ListsEntities = _dbContext.Lists
-//                            .Include(l=>l.Tasks)
-//                            .AsQueryable();
-
-
-//            if (!string.IsNullOrEmpty(queryParamsDto.Search)) 
-//            {
-//                ListsEntities = ListsEntities.Include(l => l.Tasks!.Where(t =>
-//                                                            t.Title.Contains(queryParamsDto.Search)));
-//                                            //.ThenInclude(t=>t.Steps.Where(s=>
-//                                            //            s.Name.Contains(queryParamsDto.Search))); 
-
-//                ListsEntities = ListsEntities.Where(l => l.Name.Contains(queryParamsDto.Search));
-//            }
-
-//            //_dbContext.Lists.Where(l => l.Users.Where(u=>u.Id==1).Count()>0); // << ??
-
-//            Console.WriteLine("========================"); 
-//            Console.WriteLine(ListsEntities.ToQueryString());
-//            Console.WriteLine("========================");
+    // GET api/lists
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<GetListOutputDto>>> GetAll()
+    {
+        var output = await _listService.GetAll();
+        return Ok(output);
+    
+    }
+    
+    // get list by id
+    [HttpGet("{id}")]
+    public async Task<ActionResult<GetListOutputDto>> GetById(
+        [Range(1, int.MaxValue)] [FromRoute]int id
+        )
+    {
+        var output = await _listService.GetById(id);
+        if(output == null)
+            return NotFound();
+        return Ok(output);
+    }
 
 
-//            var Dtos = _mapper.Map<List<ListDto>>(ListsEntities);
-//            return Ok(Dtos);
-//        }
+    // POST api/lists
+    [HttpPost]
+    public async Task<ActionResult<CreateListOutputDto>> Create(CreateListInputDto input)
+    {
+        var output = await _listService.Create(input);
+        return CreatedAtAction(
+            nameof(GetById), 
+            new { id = output.Id }, 
+            output);
+    }
 
 
-//        // GET api/<ListsController>/5
-//        [HttpGet("{id}")]
-//        public ActionResult<ListDetailsDto> GetListById(int id)
-//        {
-//            var ListEntity = _dbContext.Lists
-//                                .Where(l => l.Id == id)
-//                                .Include(l => l.Tasks!)
-//                                    .ThenInclude(t => t.Steps!);
+    // update list
+    [HttpPut("{id}")]   
+    public async Task<ActionResult<UpdateListOutputDto>> Update(UpdateListInputDto input)
+    {
+        var output = await _listService.Update(input);
+        return Ok(output);
+    }
 
-//            return Ok(_mapper.Map<ListDetailsDto>(ListEntity));
-//        }
+    // delete list
+    [HttpDelete("{id}")]
+    public async Task<ActionResult> Delete( 
+        [Range(1, int.MaxValue)] [FromRoute]int id)
+    {
+        await _listService.Delete(id);
+        return Ok();
+    }
+}
 
-//        // POST api/<ListsController>
-//        [HttpPost]
-//        public void Post([FromBody] string value)
-//        {
-//        }
 
-//        // PUT api/<ListsController>/5
-//        [HttpPut("{id}")]
-//        public void Put(int id, [FromBody] string value)
-//        {
-//        }
-
-//        // DELETE api/<ListsController>/5
-//        [HttpDelete("{id}")]
-//        public void Delete(int id)
-//        {
-//        }
-//    }
-//}

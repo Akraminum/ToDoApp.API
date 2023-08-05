@@ -1,0 +1,143 @@
+2023-07-28 11:04:30.277 +03:00 [INF] Application is shutting down...
+2023-07-28 11:04:36.146 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 11:04:36.193 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 11:04:36.198 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 11:04:36.201 +03:00 [INF] Hosting environment: Production
+2023-07-28 11:04:36.204 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 11:04:40.820 +03:00 [INF] Executed DbCommand (56ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-28 11:04:41.116 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-28 11:04:41.163 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-28 11:04:44.107 +03:00 [INF] Creating list
+2023-07-28 11:04:44.112 +03:00 [WRN] http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier -> 16965206-8ad6-4ef1-9887-ab0e95a119f5
+2023-07-28 11:04:44.117 +03:00 [INF] List created
+2023-07-28 11:05:05.320 +03:00 [INF] Application is shutting down...
+2023-07-28 11:05:09.915 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 11:05:09.973 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 11:05:09.979 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 11:05:09.980 +03:00 [INF] Hosting environment: Production
+2023-07-28 11:05:09.985 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 11:05:13.078 +03:00 [INF] Creating list
+2023-07-28 11:05:13.084 +03:00 [WRN] http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier -> 16965206-8ad6-4ef1-9887-ab0e95a119f5
+2023-07-28 11:05:13.087 +03:00 [INF] List created
+2023-07-28 11:15:06.506 +03:00 [INF] Application is shutting down...
+2023-07-28 11:15:16.283 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 11:15:16.323 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 11:15:16.329 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 11:15:16.331 +03:00 [INF] Hosting environment: Production
+2023-07-28 11:15:16.332 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 11:16:20.785 +03:00 [INF] Creating list
+2023-07-28 11:16:20.789 +03:00 [INF] List created
+2023-07-28 11:16:21.782 +03:00 [INF] Executed DbCommand (43ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-28 11:16:22.111 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-28 11:16:22.148 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-28 11:16:32.307 +03:00 [INF] Creating list
+2023-07-28 11:16:32.310 +03:00 [WRN] http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier -> JWT for ToDoAppAPI.com
+2023-07-28 11:16:32.313 +03:00 [WRN] http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier -> 16965206-8ad6-4ef1-9887-ab0e95a119f5
+2023-07-28 11:16:32.315 +03:00 [INF] List created
+2023-07-28 11:18:34.357 +03:00 [INF] Application is shutting down...
+2023-07-28 11:19:39.131 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 11:19:39.186 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 11:19:39.192 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 11:19:39.194 +03:00 [INF] Hosting environment: Production
+2023-07-28 11:19:39.196 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 11:19:41.273 +03:00 [INF] Creating list
+2023-07-28 11:19:43.158 +03:00 [INF] Executed DbCommand (70ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-28 11:19:43.250 +03:00 [INF] List created
+2023-07-28 11:22:06.548 +03:00 [INF] Creating list
+2023-07-28 11:22:06.608 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-28 11:22:06.614 +03:00 [INF] List created
+2023-07-28 11:22:53.754 +03:00 [ERR] The method or operation is not implemented. (1e88c2a3-e42d-49e8-a810-23a5967a263b)
+System.NotImplementedException: The method or operation is not implemented.
+   at ToDoAppAPI.Controllers.ListsController.GetList(Int32 id) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 46
+   at lambda_method169(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-28 11:23:31.494 +03:00 [INF] Application is shutting down...
+2023-07-28 11:25:13.062 +03:00 [INF] Now listening on: https://localhost:7244
+2023-07-28 11:25:13.113 +03:00 [INF] Now listening on: http://localhost:5047
+2023-07-28 11:25:13.122 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-07-28 11:25:13.124 +03:00 [INF] Hosting environment: Production
+2023-07-28 11:25:13.125 +03:00 [INF] Content root path: e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\
+2023-07-28 11:25:15.412 +03:00 [INF] Creating list
+2023-07-28 11:25:15.422 +03:00 [ERR] Not Logged In (cc5bf663-658f-4c66-9b2d-ed8bab3740f6)
+System.UnauthorizedAccessException: Not Logged In
+   at ToDoAppAPI.Services.ListsServices.ListService.CreateList(CreateListInputDto entity) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Services\ListsServices\ListService.cs:line 41
+   at ToDoAppAPI.Controllers.ListsController.Create(CreateListInputDto input) in e:\02-Play Ground\ToDoApp.API\src\ToDoAppAPI\Controllers\ListsController.cs:line 34
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at ConsistentApiResponseErrors.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext context)
+2023-07-28 11:25:23.853 +03:00 [INF] Executed DbCommand (47ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2023-07-28 11:25:24.042 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__user_Id_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0
+2023-07-28 11:25:24.082 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__userId_0='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0
+2023-07-28 11:25:25.541 +03:00 [INF] Creating list
+2023-07-28 11:25:25.806 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (Size = 450), @p1='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Lists] ([Name], [OwnerId])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2023-07-28 11:25:25.866 +03:00 [INF] List created

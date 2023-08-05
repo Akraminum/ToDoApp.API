@@ -16,22 +16,22 @@ namespace ToDoAppAPI.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly RoleManager<IdentityRole> _roleManager;
         private readonly UserManager<UserEntity> _userManager;
         private readonly IMapper _mapper;
         private readonly AppDbContext _context;
+        private readonly ILogger<UsersController> _logger;
 
         public UsersController(
-            RoleManager<IdentityRole> roleManager,
             UserManager<UserEntity> userManager,
             IMapper mapper,
-            AppDbContext context
+            AppDbContext context,
+            ILogger<UsersController> logger
             )
         {
-            _roleManager = roleManager;
             _userManager = userManager;
             _mapper = mapper;
             _context = context;
+            _logger = logger;
         }
 
 
@@ -72,11 +72,13 @@ namespace ToDoAppAPI.Controllers
         public async Task<ActionResult<GetUserOutputDto>> GetUser([FromRoute]GetUserInputDto InputDto)
         {
             UserEntity user = await _userManager.FindByNameAsync(InputDto.UserName);
-            if (user == null)
+            if (user == null){
                 return NotFound(new { description = "no user found" });
+            }
             
-            if (!(await IsValidAuthority(user)))
+            if (!(await IsValidAuthority(user))){
                 return Forbid();
+            }
 
             return _mapper.Map<GetUserOutputDto>(user);
         }

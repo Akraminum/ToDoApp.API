@@ -3,7 +3,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using ToDoAppAPI.Dtos.Users.Authenticate;
+using ToDoAppAPI.Dtos.Account;
 using ToDoAppAPI.Entities;
 using ToDoAppAPI.Services.IServices;
 
@@ -63,7 +63,7 @@ namespace ToDoAppAPI.Services
             var claims = new List<Claim>
             {
                 // standard
-                new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]!), 
+                new Claim(JwtRegisteredClaimNames.Sub, _configuration["Jwt:Subject"]!),  
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()), 
                 new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()), 
                 

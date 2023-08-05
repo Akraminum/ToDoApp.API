@@ -3,13 +3,21 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System.Data;
 using ToDoAppAPI.Entities;
+using ToDoAppAPI.Services.IServices;
 
 namespace ToDoAppAPI.DataBase
 {
     public class AppDbContext: IdentityDbContext<UserEntity>
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+        private readonly IUserProvider _userProvider;
 
+        public AppDbContext(
+            DbContextOptions<AppDbContext> options,
+            IUserProvider userProvider
+        ) : base(options)
+        {
+            _userProvider = userProvider;
+        }
         public DbSet<ListEntity> Lists { get; set; } = null!;
         public DbSet<TaskEntity> Tasks { get; set; } = null!;
         public DbSet<PriorityEntity> priorities { get; set; } = null!;
@@ -54,6 +62,11 @@ namespace ToDoAppAPI.DataBase
                 modelBuilder.Entity<ListEntity>()
                 .HasIndex(list => new{ list.OwnerId, list.Name })
                 .IsUnique(true);
+                
+                modelBuilder.Entity<ListEntity>(eBuilder => {
+                    eBuilder.HasQueryFilter(list => list.OwnerId == _userProvider.GetUserId() || 
+                                                    list.UsersLists!.Any(ul => ul.UserId == _userProvider.GetUserId()));
+                });
             #endregion
 
             #region TaskEntity

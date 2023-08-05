@@ -1,4 +1,4 @@
-﻿namespace ToDoAppAPI.Dtos.Users.Authenticate
+﻿namespace ToDoAppAPI.Dtos.Account
 {
     public class AuthenticationResponseDto
     {

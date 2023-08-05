@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using ToDoAppAPI.Dtos;
 using ToDoAppAPI.Entities;
+using ToDoAppAPI.Tasks.Dtos;
 
 namespace ToDoAppAPI.Mappers
 {
@@ -9,6 +9,7 @@ namespace ToDoAppAPI.Mappers
         public TaskProfile()
         {
             CreateMap<TaskEntity, TaskDto>();
+            
         }
     }
 }

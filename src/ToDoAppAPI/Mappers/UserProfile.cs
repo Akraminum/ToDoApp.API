@@ -1,4 +1,5 @@
 using AutoMapper;
+using ToDoAppAPI.Dtos.Account;
 using ToDoAppAPI.Dtos.Users;
 using ToDoAppAPI.Entities;
 
@@ -11,6 +12,9 @@ public class UserProfile : Profile
         CreateMap<CreateUserInputDto, UserEntity>();
         CreateMap<UserEntity, CreateUserOutputDto>();
         CreateMap<UserEntity, GetUserOutputDto>();
+
+        // account
+        CreateMap<UpdateInputDto, UserEntity>();
     }
 }
 

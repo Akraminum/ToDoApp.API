@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using ToDoAppAPI.Dtos.Users.Authenticate;
+﻿using ToDoAppAPI.Dtos.Account;
 using ToDoAppAPI.Entities;
 
 namespace ToDoAppAPI.Services.IServices
